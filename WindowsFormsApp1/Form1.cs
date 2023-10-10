@@ -188,15 +188,6 @@ namespace WindowsFormsApp1
                 string disk = comboBox1.Text.Substring(0, 2);
                 string disklabel = textBox2.Text;
                 string fmt;
-                string cov;
-                if (boot.Equals("BIOS"))
-                {
-                    cov = "MBR";
-                }
-                else
-                {
-                    cov = "GPT";
-                }
                 progressBar1.Value += 1;
                 long totalsize = 0;
                 foreach (var drive in DriveInfo.GetDrives())
