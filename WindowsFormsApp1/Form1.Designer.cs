@@ -49,6 +49,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button10 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -77,6 +80,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.listView4 = new System.Windows.Forms.ListView();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -85,6 +93,10 @@
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.Win7.SuspendLayout();
+            this.Win8.SuspendLayout();
+            this.Win10.SuspendLayout();
+            this.Win11.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -97,6 +109,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
             // label1
             // 
@@ -209,7 +222,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.ItemSize = new System.Drawing.Size(0, 1);
+            this.tabControl1.ItemSize = new System.Drawing.Size(50, 10);
             this.tabControl1.Location = new System.Drawing.Point(229, 50);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -230,7 +243,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 14);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(375, 368);
+            this.tabPage1.Size = new System.Drawing.Size(375, 341);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -314,6 +327,10 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.label18);
+            this.tabPage2.Controls.Add(this.comboBox3);
+            this.tabPage2.Controls.Add(this.button10);
             this.tabPage2.Controls.Add(this.label10);
             this.tabPage2.Controls.Add(this.button8);
             this.tabPage2.Controls.Add(this.label9);
@@ -327,15 +344,51 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 14);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(375, 368);
+            this.tabPage2.Size = new System.Drawing.Size(375, 341);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.Control;
+            this.label18.Location = new System.Drawing.Point(15, 112);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(137, 12);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "请选择指派的分区字母：";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox3.ForeColor = System.Drawing.SystemColors.Control;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(152, 109);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(149, 20);
+            this.comboBox3.TabIndex = 11;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // button10
+            // 
+            this.button10.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.SystemColors.Control;
+            this.button10.Location = new System.Drawing.Point(143, 206);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(96, 23);
+            this.button10.TabIndex = 10;
+            this.button10.Text = "刷新磁盘列表";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(93, 207);
+            this.label10.Location = new System.Drawing.Point(104, 273);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(161, 12);
             this.label10.TabIndex = 9;
@@ -359,18 +412,18 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(48, 244);
+            this.label9.Location = new System.Drawing.Point(27, 234);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(269, 24);
+            this.label9.Size = new System.Drawing.Size(317, 36);
             this.label9.TabIndex = 7;
-            this.label9.Text = "注意：安装到的磁盘会清除对应磁盘的所有分区，\r\n故请注意安装前选择正确的磁盘序号\r\n";
+            this.label9.Text = "注意：安装到的磁盘会清除对应磁盘的所有分区，\r\n故请注意安装前备份好磁盘内所有的数据\r\n刷新磁盘列表的时候可能会有短暂未响应状态，属正常现象";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(27, 46);
+            this.label8.Location = new System.Drawing.Point(27, 32);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(317, 36);
             this.label8.TabIndex = 6;
@@ -383,7 +436,7 @@
             this.textBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.textBox2.Location = new System.Drawing.Point(152, 177);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 21);
+            this.textBox2.Size = new System.Drawing.Size(149, 21);
             this.textBox2.TabIndex = 5;
             this.textBox2.Text = "ComPE启动盘";
             // 
@@ -409,7 +462,7 @@
             "USB-ZIP"});
             this.comboBox2.Location = new System.Drawing.Point(152, 143);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(180, 20);
+            this.comboBox2.Size = new System.Drawing.Size(149, 20);
             this.comboBox2.TabIndex = 3;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -421,13 +474,13 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 12);
             this.label5.TabIndex = 2;
-            this.label5.Text = "请选择磁盘写入方案：";
+            this.label5.Text = "请选择磁盘写入模式：";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(27, 114);
+            this.label4.Location = new System.Drawing.Point(27, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 12);
             this.label4.TabIndex = 1;
@@ -440,9 +493,9 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(152, 110);
+            this.comboBox1.Location = new System.Drawing.Point(152, 75);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 20);
+            this.comboBox1.Size = new System.Drawing.Size(149, 20);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -456,9 +509,9 @@
             this.tabPage3.Controls.Add(this.textBox3);
             this.tabPage3.Controls.Add(this.label14);
             this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Location = new System.Drawing.Point(4, 5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 14);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(375, 350);
+            this.tabPage3.Size = new System.Drawing.Size(375, 341);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
@@ -492,7 +545,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(48, 210);
+            this.label12.Location = new System.Drawing.Point(39, 210);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(305, 24);
             this.label12.TabIndex = 17;
@@ -545,10 +598,10 @@
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Controls.Add(this.tabControl2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 28);
+            this.tabPage4.Location = new System.Drawing.Point(4, 14);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(375, 354);
+            this.tabPage4.Size = new System.Drawing.Size(375, 341);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             // 
@@ -577,6 +630,7 @@
             // Win7
             // 
             this.Win7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Win7.Controls.Add(this.listView1);
             this.Win7.Location = new System.Drawing.Point(4, 22);
             this.Win7.Name = "Win7";
             this.Win7.Padding = new System.Windows.Forms.Padding(3);
@@ -588,6 +642,7 @@
             // 
             this.Win8.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
             this.Win8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Win8.Controls.Add(this.listView2);
             this.Win8.Location = new System.Drawing.Point(4, 22);
             this.Win8.Name = "Win8";
             this.Win8.Padding = new System.Windows.Forms.Padding(3);
@@ -598,6 +653,7 @@
             // Win10
             // 
             this.Win10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Win10.Controls.Add(this.listView3);
             this.Win10.Location = new System.Drawing.Point(4, 22);
             this.Win10.Name = "Win10";
             this.Win10.Size = new System.Drawing.Size(358, 319);
@@ -607,6 +663,7 @@
             // Win11
             // 
             this.Win11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Win11.Controls.Add(this.listView4);
             this.Win11.Location = new System.Drawing.Point(4, 22);
             this.Win11.Name = "Win11";
             this.Win11.Size = new System.Drawing.Size(358, 319);
@@ -622,12 +679,13 @@
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(149, 12);
             this.label3.TabIndex = 5;
-            this.label3.Text = "当前计算机启动方案：UEFI";
+            this.label3.Text = "当前计算机启动方案：BOOT";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 250;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // label17
@@ -639,6 +697,65 @@
             this.label17.Size = new System.Drawing.Size(299, 12);
             this.label17.TabIndex = 6;
             this.label17.Text = "Copyright © 2023 ComPE-纯净且简洁的Windows PE系统";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.SystemColors.Control;
+            this.label19.Location = new System.Drawing.Point(307, 79);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(41, 12);
+            this.label19.TabIndex = 13;
+            this.label19.Text = "SIZEGB";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.listView2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(5, 8);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(348, 303);
+            this.listView2.TabIndex = 1;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // listView3
+            // 
+            this.listView3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.listView3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.listView3.HideSelection = false;
+            this.listView3.Location = new System.Drawing.Point(5, 8);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(348, 303);
+            this.listView3.TabIndex = 1;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // listView4
+            // 
+            this.listView4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.listView4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.listView4.HideSelection = false;
+            this.listView4.Location = new System.Drawing.Point(5, 8);
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(348, 303);
+            this.listView4.TabIndex = 1;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.listView4.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.listView1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(5, 8);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(348, 303);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.SmallIcon;
             // 
             // Form1
             // 
@@ -653,10 +770,13 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ComPE工具箱";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -670,6 +790,10 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabControl2.ResumeLayout(false);
+            this.Win7.ResumeLayout(false);
+            this.Win8.ResumeLayout(false);
+            this.Win10.ResumeLayout(false);
+            this.Win11.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -706,7 +830,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -724,6 +847,15 @@
         private System.Windows.Forms.TabPage Win11;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ListView listView1;
     }
 }
 
