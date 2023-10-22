@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
         {
             GraphicsPath gPath = new GraphicsPath();
             Rectangle rect = new Rectangle(0, 5, this.Width, this.Height - 5);
-            gPath = GetRoundedRP(rect,360); //后面的30是圆的角度，数值越大圆角度越大
+            gPath = GetRoundedRP(rect,360);
             this.Region = new Region(gPath);
         }
 

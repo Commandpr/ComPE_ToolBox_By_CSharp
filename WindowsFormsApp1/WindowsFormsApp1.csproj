@@ -213,6 +213,9 @@
     <Reference Include="DiscUtils.Xva, Version=0.16.0.0, Culture=neutral, PublicKeyToken=5fa5b410cc9c6289, processorArchitecture=MSIL">
       <HintPath>..\packages\DiscUtils.Xva.0.16.13\lib\net45\DiscUtils.Xva.dll</HintPath>
     </Reference>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07, processorArchitecture=MSIL">
+      <HintPath>..\packages\HiNetCloud.IrisSkin4.20.7.2.10\lib\net46\IrisSkin4.dll</HintPath>
+    </Reference>
     <Reference Include="lzfse-net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\lzfse-net.1.0.15\lib\net45\lzfse-net.dll</HintPath>
     </Reference>
