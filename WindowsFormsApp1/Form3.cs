@@ -6,12 +6,15 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Management;
+using System.Net.Sockets;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Diagnostics.Tracing;
 
 namespace WindowsFormsApp1
 {
@@ -66,13 +69,44 @@ namespace WindowsFormsApp1
                 osv = "RtlGetVersion Error!";
             }
             else {
-                if (osVersionInfo.BuildNumber >= 22000)
+                
+                if (osVersionInfo.MajorVersion == 6)
                 {
-                    osv = "Microsoft Windows 11";
+                    if (osVersionInfo.MinorVersion == 1)
+                    {
+                        osv = "Microsoft Windows 7";
+                    }
+                    else if(osVersionInfo.MinorVersion == 2)
+                    {
+                        osv = "Microsoft Windows 8";
+                    }
+                    else if(osVersionInfo.MinorVersion == 3)
+                    {
+                        osv = "Microsoft Windows 8.1";
+                    }
+                    else if (osVersionInfo.MinorVersion == 0)
+                    {
+                        osv = "Microsoft Windows Vista";
+                    }
+                    else
+                    {
+                        osv = "Microsoft Windows";
+                    }
+                }
+                else if(osVersionInfo.MajorVersion == 10)
+                {
+                    if (osVersionInfo.BuildNumber >= 22000)
+                    {
+                        osv = "Microsoft Windows 11";
+                    }
+                    else
+                    {
+                        osv = "Microsoft Windows 10";
+                    }
                 }
                 else
                 {
-                    osv = "Microsoft Windows " + osVersionInfo.MajorVersion;
+                    osv = "Microsoft Windows";
                 }
             }
             string osb = osVersionInfo.MajorVersion.ToString()+"."+osVersionInfo.MinorVersion.ToString()+"."+osVersionInfo.BuildNumber.ToString();
@@ -103,23 +137,51 @@ namespace WindowsFormsApp1
                 CPUName = mo["Name"].ToString();
             }
             moscpu.Dispose();
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            string ips = "";
+            string ips2 = "";
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    ips = ip.ToString();
+                }
+                if (ip.AddressFamily == AddressFamily.InterNetworkV6)
+                {
+                    ips2 = ip.ToString();
+                }
+            }
+            double memory = (double)(Math.Round((decimal)(GetTotalPhysicalMemory() / 1024 / 1024 / 1024),2));
+            string ms = string.Format("{0:F2}", memory);
             listView1.Items.Add("ComPE工具箱版本：7.0.4.2");
             listView1.Items.Add("OS系统：" + osv);
             listView1.Items.Add("OS版本号：" + osb);
+            listView1.Items.Add("OS安装目录：" + Environment.GetFolderPath(Environment.SpecialFolder.Windows));
+            listView1.Items.Add("OS系统目录：" + Environment.GetFolderPath(Environment.SpecialFolder.System));
             listView1.Items.Add("计算机名：" + Environment.MachineName);
             listView1.Items.Add("系统登录用户名：" + Environment.UserName);
             listView1.Items.Add("主板厂商：" + s);
             listView1.Items.Add("BIOS版本：" + strID);
             listView1.Items.Add("BIOS名称：" + bsname);
-            listView1.Items.Add("物理内存大小：" + (GetTotalPhysicalMemory()/1024/1024/1024).ToString()+"GB");
+            listView1.Items.Add("物理内存总大小：" +ms+"GB");
             listView1.Items.Add("CPU型号：" + CPUName);
+            listView1.Items.Add("本机IPv4：" + ips);
+            listView1.Items.Add("本机IPv6：" + ips2);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("start https://win-compe.top");
+            Process.Start("https://win-compe.top");
         }
 
-        
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("cmd.exe", "/k (title 命令提示符 && echo 命令提示符工具)");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("taskmgr.exe");
+        }
     }
 }

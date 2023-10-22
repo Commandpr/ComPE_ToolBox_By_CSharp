@@ -26,6 +26,7 @@ using System.Linq.Expressions;
 
 namespace WindowsFormsApp1
 {
+ 
     public partial class Form1 : Form
     {
         string boot;
@@ -110,52 +111,38 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+            private void Form1_Load(object sender, EventArgs e)
         {
             Form2 f = new Form2();
-            CheckUpdate(7042);
             f.Show();
+            f.UpdateLabel("检查更新...");
+            CheckUpdate(7042);
+            f.UpdateLabel("初始化窗口...");
             comboBox2.SelectedIndex = 0;
+            button2.Enabled = false;
+            button5.Text = "下载Windows镜像\n（未完工）";//临时
+            f.UpdateLabel("获取磁盘列表...");
+            textBox1.Text = Environment.CurrentDirectory;
             tabControl1.ItemSize = new Size(0,1);
             comboBox1.Items.AddRange(GetDiskList());
+            f.UpdateLabel("获取启动方案...");
             if (IsUEFI())
             {
                 label3.Text = "当前计算机启动方案：UEFI";
                 boot = "UEFI";
                 label3.Location = new Point(475, 412);
+                button4.Text = "重启计算机\n（进入固件）";
             }
             else
             {
                 label3.Text = "当前计算机启动方案：Legacy/BIOS";
                 boot = "BIOS";
                 label3.Location = new Point(435, 412);
+                button4.Text = "重启计算机";
             }
             comboBox1.SelectedIndex = 0;
             f.Hide();
         }
-
-        private void timer1_Tick(object sender, EventArgs e)//选择夹效果
-        {
-            if (tabControl1.SelectedTab == tabPage1)
-            {
-                button1.Enabled = true;
-                button2.Enabled = false;
-                button3.Enabled = true;
-            }
-            else if (tabControl1.SelectedTab == tabPage2)
-            {
-                button1.Enabled = false;
-                button2.Enabled = true;
-                button3.Enabled = true;
-            }
-            else if (tabControl1.SelectedTab == tabPage3)
-            {
-                button1.Enabled = true;
-                button2.Enabled = true;
-                button3.Enabled = false;
-            }
-        }
-
         public string[] GetDiskList() //获取硬盘列表
         {
             List<string> list = new List<string>();
@@ -273,14 +260,36 @@ namespace WindowsFormsApp1
             if(MessageBox.Show("再次警告！写入前请保存好您的U盘或可移动磁盘里的所有内容，以免数据丢失！\n程序运行图中可能出现未响应状态，属于正常现象\n继续请选择“是”，否则请选择“否”", "警告：", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 progressBar1.Maximum = 20;
-                button8.Text = "正在制作";
+                button8.Text = "正在制作...";
                 button8.Enabled = false;
                 string disk = comboBox3.Text.Substring(0, 2);
                 string disklabel = textBox2.Text;
                 string fmt;
                 string cov;
                 string active;
+                string createpar;
+                string formatfs;
                 string disktype = GetPartitionType(disk);
+                long totalsize = 0;
+                progressBar1.Value += 1;
+
+                foreach (var drive in DriveInfo.GetDrives())
+                {
+                    if (GetDiskNumber(drive.Name.Substring(0, 2)) == GetDiskNumber(disk))
+                    {
+                        totalsize += drive.TotalSize;
+                    }
+                }
+                long togb = totalsize / 1024 / 1024 / 1024 - 1;
+                if (togb <= 32)
+                {
+                    fmt = "FAT32";
+                }
+                else
+                {
+                    fmt = "NTFS";
+                }
+                progressBar1.Value += 1;
                 if (boot == "UEFI")
                 {
                     if (disktype == "MBR")
@@ -292,6 +301,8 @@ namespace WindowsFormsApp1
                         cov = "";
                     }
                     active = "";
+                    createpar = "CREATE PAR EFI SIZE=1000";
+                    formatfs = "FORMAT FS=FAT32 QUICK";
 
                 }
                 else
@@ -304,40 +315,24 @@ namespace WindowsFormsApp1
                         cov = "";
                     }
                     active = "ACTIVE";
+                    createpar = "CREATE PAR PRI";
+                    formatfs = $"FORMAT FS={fmt} QUICK";
                 }
+                
                 progressBar1.Value += 1;
-                long totalsize = 0;
-                foreach (var drive in DriveInfo.GetDrives())
-                {
-                    if (GetDiskNumber(drive.Name.Substring(0,2)) == GetDiskNumber(disk))
-                    {
-                        totalsize += drive.TotalSize;
-                    }
-                }
-                progressBar1.Value += 1;
-                long togb = totalsize / 1024 / 1024 / 1024;
-                if(togb <= 32)
-                {
-                    fmt = "FAT32";
-                }
-                else
-                {
-                    fmt = "NTFS";
-                }
-                progressBar1.Value += 1;
+                
                 string[] ids = { "06", "5a" };
                 progressBar1.Value += 1;
                 string[] lines = {"SELECT DISK "+GetDiskNumber(disk).ToString(),
                         "CLEAN",
                         cov,
-                        "CREATE PAR PRI",
-                        "FORMAT FS=" + fmt + " QUICK",
-                        "SET ID=" + ids[comboBox2.SelectedIndex] + " OVERRIDE",
+                        createpar,
+                        formatfs,
                         active,
                         "ASSIGN LETTER="+disk};
                 string scrPath = Environment.CurrentDirectory;
                 progressBar1.Value += 1;
-                using (StreamWriter outputFile = new StreamWriter(Path.Combine(scrPath, "script.txt")))
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(scrPath, "script.txt"), false))
                 {
                     foreach (string line in lines)
                         outputFile.WriteLine(line);
@@ -361,7 +356,44 @@ namespace WindowsFormsApp1
                 else
                 {
                     progressBar1.Value += 1;
-
+                    string[] lines2 = new string[] { };
+                    if (boot == "UEFI")
+                    {
+                        lines2.Append("SELECT DISK " + GetDiskNumber(disk).ToString());
+                        lines2.Append("SELECT PAR 1");
+                        lines2.Append("REMOVE LETTER=" + disk);
+                        lines2.Append("CREATE PAR PRI");
+                        lines2.Append($"FORMAT FS={fmt} QUICK");
+                        lines2.Append("ACTIVE");
+                        lines2.Append("ASSIGN LETTER=" + disk);
+                    }
+                    else
+                    {
+                        lines2.Append("SELECT DISK " + GetDiskNumber(disk).ToString());
+                        lines2.Append("SELECT PAR 1");
+                        lines2.Append("SET ID=" + ids[comboBox2.SelectedIndex] + " OVERRIDE");
+                    }
+                    SaveISOFile("Tempfile.iso", Environment.CurrentDirectory);
+                    progressBar1.Value += 1;
+                    string isoPath = Environment.CurrentDirectory + "\\Tempfile.iso";
+                    ExtractISO(isoPath, disk + "\\");
+                    progressBar1.Value += 1;
+                    string scrPath2 = Environment.CurrentDirectory;
+                    progressBar1.Value += 1;
+                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(scrPath2, "script.txt"),false))
+                    {
+                        foreach (string line in lines2)
+                            outputFile.WriteLine(line);
+                    }
+                    progressBar1.Value += 1;
+                    Process p1 = new Process();
+                    p1.StartInfo.FileName = "Diskpart.exe";
+                    p1.StartInfo.Arguments = "-s script.txt";
+                    p1.StartInfo.UseShellExecute = false;
+                    p1.StartInfo.CreateNoWindow = true;
+                    p1.Start();
+                    p1.WaitForExit();
+                    p1.Close();
                     Process po = new Process();
                     po.StartInfo.FileName = "label.exe";
                     po.StartInfo.Arguments = disk + " " + disklabel;
@@ -370,11 +402,8 @@ namespace WindowsFormsApp1
                     po.Start();
                     po.WaitForExit();
                     po.Close();
-                    SaveISOFile("Tempfile.iso", Environment.CurrentDirectory);
-                    progressBar1.Value += 1;
-                    string isoPath = Environment.CurrentDirectory+"\\Tempfile.iso";
-                    ExtractISO(isoPath, disk + "\\");
-                    progressBar1.Value += 1;
+                    File.Delete(isoPath);
+                    File.Delete(Path.Combine(scrPath2, "script.txt"));
                     MessageBox.Show("安装完成！感谢您使用ComPE！", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     progressBar1.Value = 0;
                     button8.Text = "制作USB启动盘";
@@ -427,11 +456,11 @@ namespace WindowsFormsApp1
         {
             if (comboBox2.SelectedIndex == 0)
             {
-                label10.Text = "硬盘仿真模式，启动速度较快";
+                label10.Text = "当前模式选择：硬盘仿真模式，启动速度较快";
             }
             if (comboBox2.SelectedIndex == 1)
             {
-                label10.Text = "大容量软盘仿真模式，兼容性较好";
+                label10.Text = "当前模式选择：大容量软盘仿真模式，兼容性较好";
             }
         }
         [DllImport("kernel32.dll")]
@@ -441,11 +470,6 @@ namespace WindowsFormsApp1
         {
             uint result = GetFirmwareEnvironmentVariableA("", "{00000000-0000-0000-0000-000000000000}", IntPtr.Zero, 0);
             return result != 1; // 1 means ERROR_INVALID_FUNCTION
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
    
@@ -469,7 +493,7 @@ namespace WindowsFormsApp1
             BinaryReader br = new BinaryReader(fs);
             progressBar1.Value += 1;
             // 读取ISO的数据
-            _ = br.ReadBytes(1021440);
+            _ = br.ReadBytes(1025024);
             byte[] data2 = br.ReadBytes((int)(fs.Length - fs.Position));
             progressBar1.Value += 1;
             // 关闭流
@@ -490,11 +514,6 @@ namespace WindowsFormsApp1
             progressBar1.Value += 1;
             fs1.Close();
             progressBar1.Value += 1;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -532,7 +551,7 @@ namespace WindowsFormsApp1
             {
                 using (Stream FileStr = finfo.OpenRead())
                 {
-                    using (FileStream Fs = File.Create(RootPath + "\\" + finfo.Name)) // Here you can Set the BufferSize Also e.g. File.Create(RootPath + "\\" + finfo.Name, 4 * 1024)
+                    using (FileStream Fs = File.Create(RootPath + "\\" + finfo.Name))
                     {
                         // 将FileStr中的数据复制到Fs中，缓冲区大小为4 * 1024，您可以根据需要修改
                         FileStr.CopyTo(Fs, 4 * 1024);
@@ -564,7 +583,7 @@ namespace WindowsFormsApp1
         private void button9_Click(object sender, EventArgs e)
         {
             
-            if (MessageBox.Show("警告！如果未关闭反病毒软件，程序可能执行失败，建议关闭反病毒软件。继续请选择“确定”，否则请选择“取消”", "提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("警告！如果未关闭反病毒软件，程序可能执行失败，建议关闭反病毒软件。\n程序可能无响应，是正常现象，不要强制退出。\n继续请选择“确定”，否则请选择“取消”", "提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 try {
                     string time;
@@ -649,7 +668,7 @@ namespace WindowsFormsApp1
                     progressBar1.Value += 1;
                     string[] uninstall = { "bcdedit >nul",
                                         "if not ERRORLEVEL 1 goto uacOK",
-                                        "%1 start \"\" mshta vbscript:createobject(\"shell.application\").shellexecute(\"\"\"%~0\"\"\", \"::\",, \"runas\", 1)(window.close)&exit",
+                                        "%1 powershell -Command \"Start-Process -FilePath %~n0 -Verb runAs\"&exit",
                                         ":uacOK",
                                         "@echo off",
                                         "set name =%~n0",
@@ -668,7 +687,7 @@ namespace WindowsFormsApp1
                                         "start \"cmd /c del /s /f /q %name%\"",
                                         "exit",
                                         ":n",
-                                        "exit" };
+                                        "exit" }; //创建卸载的批处理程序，并且添加调用Powershell的命令申请管理员运行
                     string scrPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
                     progressBar1.Value += 1;
                     using (StreamWriter outputFile = new StreamWriter(Path.Combine(scrPath, "卸载ComPE.bat")))
@@ -716,9 +735,35 @@ namespace WindowsFormsApp1
             f3.ShowDialog();
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabPage1)
+            {
+                pictureBox2.Location = new Point(pictureBox2.Location.X, button2.Location.Y + flowLayoutPanel1.Location.Y);
+                button1.Enabled = true;
+                button2.Enabled = false;
+                button1.Enabled = true;
+            }
+            else if (tabControl1.SelectedTab == tabPage2)
+            {
+                pictureBox2.Location = new Point(pictureBox2.Location.X, button1.Location.Y + flowLayoutPanel1.Location.Y);
+                button1.Enabled = false;
+                button2.Enabled = true;
+                button3.Enabled = true;
+            }
+            else if (tabControl1.SelectedTab == tabPage3)
+            {
+                pictureBox2.Location = new Point(pictureBox2.Location.X, button3.Location.Y + flowLayoutPanel1.Location.Y);
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = false;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //Form4.ActiveForm.Location = Location;
         }
     }
 }
