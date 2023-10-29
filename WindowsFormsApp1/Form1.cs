@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("敬请期待...", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("本功能尚未完成，敬请期待...", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -121,7 +121,10 @@ namespace WindowsFormsApp1
             f.UpdateLabel("初始化窗口...");
             comboBox2.SelectedIndex = 0;
             button2.Enabled = false;
-            button5.Text = "下载Windows镜像\n（未完工）";//临时
+            label21.Location = new Point(70, 134);
+            pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width/2*3+1, button2.Location.Y + flowLayoutPanel1.Location.Y);
+            pictureBox2.Location = new Point(pictureBox2.Location.X, button2.Location.Y + flowLayoutPanel1.Location.Y);
+            label21.Text = button2.Text;
             f.UpdateLabel("获取磁盘列表...");
             textBox1.Text = Environment.CurrentDirectory;
             tabControl1.ItemSize = new Size(0,1);
@@ -132,14 +135,12 @@ namespace WindowsFormsApp1
                 label3.Text = "当前计算机启动方案：UEFI";
                 boot = "UEFI";
                 label3.Location = new Point(475, 412);
-                button4.Text = "重启计算机\n（进入固件）";
             }
             else
             {
                 label3.Text = "当前计算机启动方案：Legacy/BIOS";
                 boot = "BIOS";
                 label3.Location = new Point(435, 412);
-                button4.Text = "重启计算机";
             }
             comboBox1.SelectedIndex = 0;
             f.Hide();
@@ -742,23 +743,32 @@ namespace WindowsFormsApp1
             if (tabControl1.SelectedTab == tabPage1)
             {
                 pictureBox2.Location = new Point(pictureBox2.Location.X, button2.Location.Y + flowLayoutPanel1.Location.Y);
+                pictureBox3.Location = new Point(pictureBox2.Location.X+pictureBox1.Width-pictureBox3.Width / 2 * 3+1, button2.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = true;
                 button2.Enabled = false;
                 button1.Enabled = true;
+                label21.Location = new Point(70, 134);
+                label21.Text = button2.Text;
             }
             else if (tabControl1.SelectedTab == tabPage2)
             {
                 pictureBox2.Location = new Point(pictureBox2.Location.X, button1.Location.Y + flowLayoutPanel1.Location.Y);
+                pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3+1, button1.Location.Y + flowLayoutPanel1.Location.Y); 
                 button1.Enabled = false;
                 button2.Enabled = true;
                 button3.Enabled = true;
+                label21.Location = new Point(70, 194);
+                label21.Text = button1.Text;
             }
             else if (tabControl1.SelectedTab == tabPage3)
             {
                 pictureBox2.Location = new Point(pictureBox2.Location.X, button3.Location.Y + flowLayoutPanel1.Location.Y);
+                pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3+1, button3.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = true;
                 button2.Enabled = true;
                 button3.Enabled = false;
+                label21.Location = new Point(66, 254);
+                label21.Text = button3.Text;
             }
         }
 

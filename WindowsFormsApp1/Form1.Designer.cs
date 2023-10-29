@@ -85,6 +85,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -98,6 +100,7 @@
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -125,56 +128,72 @@
             // button4
             // 
             this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(3, 243);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(207, 54);
             this.button4.TabIndex = 3;
             this.button4.Text = "重启计算机";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
             this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(3, 183);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(207, 54);
             this.button5.TabIndex = 4;
-            this.button5.Text = "下载Windows原版镜像（未完工）";
+            this.button5.Text = "下载Windows镜像";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
             this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(3, 123);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(207, 54);
             this.button3.TabIndex = 2;
             this.button3.Text = "安装到系统磁盘";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(3, 63);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(207, 54);
             this.button1.TabIndex = 0;
             this.button1.Text = "制作USB启动盘";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -182,16 +201,18 @@
             // 
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button2.Size = new System.Drawing.Size(207, 54);
             this.button2.TabIndex = 1;
             this.button2.Text = "保存成ISO镜像";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -360,7 +381,7 @@
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.textBox4.ForeColor = System.Drawing.SystemColors.Control;
             this.textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox4.Location = new System.Drawing.Point(145, 109);
+            this.textBox4.Location = new System.Drawing.Point(145, 124);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(180, 21);
             this.textBox4.TabIndex = 19;
@@ -371,7 +392,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.textBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox3.Location = new System.Drawing.Point(145, 143);
+            this.textBox3.Location = new System.Drawing.Point(145, 158);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(180, 21);
             this.textBox3.TabIndex = 15;
@@ -394,7 +415,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(32, 210);
+            this.label12.Location = new System.Drawing.Point(32, 225);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(305, 24);
             this.label12.TabIndex = 17;
@@ -405,7 +426,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(20, 46);
+            this.label13.Location = new System.Drawing.Point(20, 61);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(335, 36);
             this.label13.TabIndex = 16;
@@ -416,7 +437,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(20, 147);
+            this.label14.Location = new System.Drawing.Point(20, 162);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(125, 12);
             this.label14.TabIndex = 14;
@@ -426,7 +447,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.SystemColors.Control;
-            this.label16.Location = new System.Drawing.Point(43, 113);
+            this.label16.Location = new System.Drawing.Point(43, 128);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(101, 12);
             this.label16.TabIndex = 11;
@@ -637,7 +658,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.SystemColors.Control;
-            this.label20.Location = new System.Drawing.Point(42, 210);
+            this.label20.Location = new System.Drawing.Point(42, 227);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(287, 24);
             this.label20.TabIndex = 18;
@@ -648,7 +669,7 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.textBox5.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox5.Location = new System.Drawing.Point(111, 144);
+            this.textBox5.Location = new System.Drawing.Point(105, 161);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(166, 21);
             this.textBox5.TabIndex = 6;
@@ -658,7 +679,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Location = new System.Drawing.Point(111, 109);
+            this.textBox1.Location = new System.Drawing.Point(105, 126);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(166, 21);
             this.textBox1.TabIndex = 0;
@@ -667,7 +688,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(29, 147);
+            this.label11.Location = new System.Drawing.Point(23, 164);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 12);
             this.label11.TabIndex = 5;
@@ -677,7 +698,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(60, 46);
+            this.label7.Location = new System.Drawing.Point(60, 63);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(269, 24);
             this.label7.TabIndex = 4;
@@ -701,7 +722,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(28, 112);
+            this.label2.Location = new System.Drawing.Point(22, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 12);
             this.label2.TabIndex = 2;
@@ -712,7 +733,7 @@
             this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.Control;
-            this.button6.Location = new System.Drawing.Point(285, 107);
+            this.button6.Location = new System.Drawing.Point(279, 124);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 1;
@@ -763,9 +784,31 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pictureBox2.Location = new System.Drawing.Point(15, 115);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(7, 54);
+            this.pictureBox2.Size = new System.Drawing.Size(10, 54);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label21.ForeColor = System.Drawing.SystemColors.Control;
+            this.label21.Location = new System.Drawing.Point(67, 254);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(119, 16);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "安装到系统磁盘";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.pictureBox3.Location = new System.Drawing.Point(210, 115);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(10, 54);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
             // 
             // Form1
             // 
@@ -773,6 +816,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label3);
@@ -807,6 +852,7 @@
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -870,6 +916,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 
