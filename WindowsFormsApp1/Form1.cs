@@ -24,10 +24,11 @@ using WindowsFormsApp1.Properties;
 using System.Text.RegularExpressions;
 using System.Linq.Expressions;
 using System.Threading;
+using System.ComponentModel.Composition;
 
 namespace WindowsFormsApp1
 {
- 
+
     public partial class Form1 : Form
     {
         string boot;
@@ -102,9 +103,10 @@ namespace WindowsFormsApp1
                     progressBar1.Maximum = 11;
                     SaveISOFile(textBox5.Text, textBox1.Text);
                     MessageBox.Show("保存成功，感谢您使用ComPE！", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }catch(Exception exp)
+                }
+                catch (Exception exp)
                 {
-                    MessageBox.Show("保存失败！请检查程序是否完整，以及目录是否仍然存在。\n错误原因：\n"+exp, "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("保存失败！请检查程序是否完整，以及目录是否仍然存在。\n错误原因：\n" + exp, "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 button7.Text = "保存文件";
                 button7.Enabled = true;
@@ -112,7 +114,7 @@ namespace WindowsFormsApp1
             }
         }
 
-            private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             Form2 f = new Form2();
             f.Show();
@@ -122,12 +124,12 @@ namespace WindowsFormsApp1
             comboBox2.SelectedIndex = 0;
             button2.Enabled = false;
             label21.Location = new Point(70, 134);
-            pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width/2*3+1, button2.Location.Y + flowLayoutPanel1.Location.Y);
+            pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button2.Location.Y + flowLayoutPanel1.Location.Y);
             pictureBox2.Location = new Point(pictureBox2.Location.X, button2.Location.Y + flowLayoutPanel1.Location.Y);
             label21.Text = button2.Text;
             f.UpdateLabel("获取磁盘列表...");
             textBox1.Text = Environment.CurrentDirectory;
-            tabControl1.ItemSize = new Size(0,1);
+            tabControl1.ItemSize = new Size(0, 1);
             comboBox1.Items.AddRange(GetDiskList());
             f.UpdateLabel("获取启动方案...");
             if (IsUEFI())
@@ -187,7 +189,7 @@ namespace WindowsFormsApp1
             Regex regex2 = new Regex("Size:.*");
             Match match2 = regex2.Match(comboBox1.Text);
             string result2 = match2.Value;
-            label19.Text = result2.Replace("Size:","");
+            label19.Text = result2.Replace("Size:", "");
             Regex regex = new Regex("^(.*?),Size:");
             Match match = regex.Match(comboBox1.Text);
             string result = match.Groups[1].Value;
@@ -259,7 +261,7 @@ namespace WindowsFormsApp1
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("再次警告！写入前请保存好您的U盘或可移动磁盘里的所有内容，以免数据丢失！\n程序运行图中可能出现未响应状态，属于正常现象\n继续请选择“是”，否则请选择“否”", "警告：", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if (MessageBox.Show("再次警告！写入前请保存好您的U盘或可移动磁盘里的所有内容，以免数据丢失！\n程序运行图中可能出现未响应状态，属于正常现象\n继续请选择“是”，否则请选择“否”", "警告：", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 progressBar1.Maximum = 20;
                 button8.Text = "正在制作...";
@@ -309,7 +311,8 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    if(disktype == "GPT"){
+                    if (disktype == "GPT")
+                    {
                         cov = "CONVERT MBR";
                     }
                     else
@@ -320,9 +323,9 @@ namespace WindowsFormsApp1
                     createpar = "CREATE PAR PRI";
                     formatfs = $"FORMAT FS={fmt} QUICK";
                 }
-                
+
                 progressBar1.Value += 1;
-                
+
                 string[] ids = { "06", "5a" };
                 progressBar1.Value += 1;
                 string[] lines = {"SELECT DISK "+GetDiskNumber(disk).ToString(),
@@ -382,7 +385,7 @@ namespace WindowsFormsApp1
                     progressBar1.Value += 1;
                     string scrPath2 = Environment.CurrentDirectory;
                     progressBar1.Value += 1;
-                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(scrPath2, "script.txt"),false))
+                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(scrPath2, "script.txt"), false))
                     {
                         foreach (string line in lines2)
                             outputFile.WriteLine(line);
@@ -427,11 +430,11 @@ namespace WindowsFormsApp1
                 // 设置请求头
                 client.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
 
-                string postString = "number="+version.ToString();
+                string postString = "number=" + version.ToString();
                 byte[] postData = Encoding.ASCII.GetBytes(postString);
 
                 // 发送POST请求，并将字符串作为请求体发送
-                byte[] responseData = client.UploadData(url,"POST",postData);
+                byte[] responseData = client.UploadData(url, "POST", postData);
                 string result = Encoding.UTF8.GetString(responseData);
 
                 // 将返回的JSON字符串解析为对象
@@ -442,7 +445,7 @@ namespace WindowsFormsApp1
 
                 if (updateValue == "1")
                 {
-                    if(MessageBox.Show("检测到新版本："+jsonObj.version+"\n是否前往官网下载？","发现新版本：",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("检测到新版本：" + jsonObj.version + "\n是否前往官网下载？", "发现新版本：", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         Process.Start("https://win-compe.top");
                         Environment.Exit(0);
@@ -474,8 +477,9 @@ namespace WindowsFormsApp1
             return result != 1; // 1 means ERROR_INVALID_FUNCTION
         }
 
-   
-        private void textBox4_KeyPress(object sender, KeyPressEventArgs e) {
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
             if (e.KeyChar != '\b')//这是允许输入退格键
             {
                 if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
@@ -485,7 +489,7 @@ namespace WindowsFormsApp1
             }
         }
         //保存ISO的函数
-        void SaveISOFile(string filename,string dir)
+        void SaveISOFile(string filename, string dir)
         {
             // 假设合并后的文件名是file1.jpg
             string name = Path.GetFileName(Application.ExecutablePath);
@@ -504,7 +508,7 @@ namespace WindowsFormsApp1
             fs.Close();
             progressBar1.Value += 1;
             // 创建新的文件流和写入器
-            FileStream fs1 = new FileStream(dir+"\\"+filename, FileMode.Create, FileAccess.Write);
+            FileStream fs1 = new FileStream(dir + "\\" + filename, FileMode.Create, FileAccess.Write);
             progressBar1.Value += 1;
             BinaryWriter bw1 = new BinaryWriter(fs1);
             progressBar1.Value += 1;
@@ -528,7 +532,7 @@ namespace WindowsFormsApp1
             // 读取ISO文件
             CDReader Reader = new CDReader(File.Open(toExtract, FileMode.Open), true);
             // 传递根目录，文件夹名称和要解压的文件夹
-            ExtractDirectory(Reader.Root, folderName /*+ Path.GetFileNameWithoutExtension(toExtract)*/ + "\\","");
+            ExtractDirectory(Reader.Root, folderName /*+ Path.GetFileNameWithoutExtension(toExtract)*/ + "\\", "");
             // 清除Reader并释放内存
             Reader.Dispose();
         }
@@ -584,89 +588,90 @@ namespace WindowsFormsApp1
 
         private void button9_Click(object sender, EventArgs e)
         {
-            
+
             if (MessageBox.Show("警告！如果未关闭反病毒软件，程序可能执行失败，建议关闭反病毒软件。\n程序可能无响应，是正常现象，不要强制退出。\n继续请选择“确定”，否则请选择“取消”", "提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                try {
+                try
+                {
                     string time;
                     string title;
                     button9.Text = "正在安装...";
                     button9.Enabled = false;
                     if (textBox4.Text.Replace(" ", "") == "")
-                {
-                    time = "5";
-                }
-                else
-                {
-                    time = textBox4.Text;
-                }
-                if(textBox2.Text.Replace(" ", "") == "")
-                {
-                    title = "进入ComPE维护系统";
-                }
-                else
-                {
-                    title = textBox2.Text;
-                }
-                string guid1 = "{BEAAB3B9-80C3-13A8-6CF2-F5CC87F4006E}";
-                string guid2 = "{40D2B668-D94D-7EE2-0C07-7A796BB7A1D1}";
-                string systempar = Environment.SystemDirectory.Substring(0, 2);
-                var cmds = new List<string>();
-                if (boot.Equals("BIOS"))
-                {
-                    cmds.Add("/create " + guid1 + " /d \"" + title + "\" /application osloader");
-                    cmds.Add("/create " + guid2 + " /device");
-                    cmds.Add("/set " + guid2 + " ramdisksdidevice partition=\"" + systempar + "\"");
-                    cmds.Add("/set " + guid2 + " ramdisksdipath \\sources\\boot.sdi");
-                    cmds.Add("/set " + guid1 + " device ramdisk=\"[" + systempar + "]\\sources\\boot.wim," + guid2);
-                    cmds.Add("/set " + guid1 + " osdevice ramdisk=\"[" + systempar + "]\\sources\\boot.wim," + guid2);
-                    cmds.Add("/set " + guid1 + " path \\windows\\system32\\boot\\winload.exe");
-                    cmds.Add("/set " + guid1 + " systemroot \\windows");
-                    cmds.Add("/set " + guid1 + " detecthal yes");
-                    cmds.Add("/set " + guid1 + " winpe yes");
-                    cmds.Add("/displayorder " + guid1 + " /addlast");
-                    cmds.Add("/timeout " + time);
-                }
-                else
-                {
-                    cmds.Add("/create " + guid1 + " /d \""+title+"\" /application osloader");
-                    cmds.Add("/create " + guid2 + " /device");
-                    cmds.Add("/set " + guid2 + " ramdisksdidevice partition=\"" + systempar + "\"");
-                    cmds.Add("/set " + guid2 + " ramdisksdipath \\boot\\boot.sdi");
-                    cmds.Add("/set " + guid1 + " device ramdisk=\"[" + systempar + "]\\sources\\boot.wim," + guid2);
-                    cmds.Add("/set " + guid1 + " osdevice ramdisk=\"[" + systempar + "]\\sources\\boot.wim," + guid2);
-                    cmds.Add("/set " + guid1 + " path \\windows\\system32\\boot\\winload.efi");
-                    cmds.Add("/set " + guid1 + " systemroot \\windows");
-                    cmds.Add("/set " + guid1 + " detecthal yes");
-                    cmds.Add("/set " + guid1 + " winpe yes");
-                    cmds.Add("/displayorder " + guid1 + " /addlast");
-                    cmds.Add("/timeout " +time);
-                }
-                
-                progressBar1.Maximum = 4 + cmds.Count;
-                foreach(string cmd in cmds)
-                {
-                    Process p = new Process();
-                    p.StartInfo.UseShellExecute = false;
-                    p.StartInfo.CreateNoWindow = true;
-                    p.StartInfo.FileName = "bcdedit.exe";
-                    p.StartInfo.Arguments = cmd;
-                    p.Start();
-                    p.WaitForExit();
-                    if (p.ExitCode != 0)
                     {
-                            throw new Exception();//手动抛出异常以终止操作
+                        time = "5";
                     }
                     else
                     {
-                        progressBar1.Value += 1;
+                        time = textBox4.Text;
                     }
-                    
-                }
-                        SaveISOFile("Tempfile.iso", Environment.CurrentDirectory);
-                        string isoPath = Environment.CurrentDirectory + "\\Tempfile.iso";
-                        progressBar1.Value += 1;
-                        ExtractISO(isoPath, systempar + "\\");
+                    if (textBox2.Text.Replace(" ", "") == "")
+                    {
+                        title = "进入ComPE维护系统";
+                    }
+                    else
+                    {
+                        title = textBox2.Text;
+                    }
+                    string guid1 = "{BEAAB3B9-80C3-13A8-6CF2-F5CC87F4006E}";
+                    string guid2 = "{40D2B668-D94D-7EE2-0C07-7A796BB7A1D1}";
+                    string systempar = Environment.SystemDirectory.Substring(0, 2);
+                    var cmds = new List<string>();
+                    if (boot.Equals("BIOS"))
+                    {
+                        cmds.Add("/create " + guid1 + " /d \"" + title + "\" /application osloader");
+                        cmds.Add("/create " + guid2 + " /device");
+                        cmds.Add("/set " + guid2 + " ramdisksdidevice partition=\"" + systempar + "\"");
+                        cmds.Add("/set " + guid2 + " ramdisksdipath \\sources\\boot.sdi");
+                        cmds.Add("/set " + guid1 + " device ramdisk=\"[" + systempar + "]\\sources\\boot.wim," + guid2);
+                        cmds.Add("/set " + guid1 + " osdevice ramdisk=\"[" + systempar + "]\\sources\\boot.wim," + guid2);
+                        cmds.Add("/set " + guid1 + " path \\windows\\system32\\boot\\winload.exe");
+                        cmds.Add("/set " + guid1 + " systemroot \\windows");
+                        cmds.Add("/set " + guid1 + " detecthal yes");
+                        cmds.Add("/set " + guid1 + " winpe yes");
+                        cmds.Add("/displayorder " + guid1 + " /addlast");
+                        cmds.Add("/timeout " + time);
+                    }
+                    else
+                    {
+                        cmds.Add("/create " + guid1 + " /d \"" + title + "\" /application osloader");
+                        cmds.Add("/create " + guid2 + " /device");
+                        cmds.Add("/set " + guid2 + " ramdisksdidevice partition=\"" + systempar + "\"");
+                        cmds.Add("/set " + guid2 + " ramdisksdipath \\boot\\boot.sdi");
+                        cmds.Add("/set " + guid1 + " device ramdisk=\"[" + systempar + "]\\sources\\boot.wim," + guid2);
+                        cmds.Add("/set " + guid1 + " osdevice ramdisk=\"[" + systempar + "]\\sources\\boot.wim," + guid2);
+                        cmds.Add("/set " + guid1 + " path \\windows\\system32\\boot\\winload.efi");
+                        cmds.Add("/set " + guid1 + " systemroot \\windows");
+                        cmds.Add("/set " + guid1 + " detecthal yes");
+                        cmds.Add("/set " + guid1 + " winpe yes");
+                        cmds.Add("/displayorder " + guid1 + " /addlast");
+                        cmds.Add("/timeout " + time);
+                    }
+
+                    progressBar1.Maximum = 4 + cmds.Count;
+                    foreach (string cmd in cmds)
+                    {
+                        Process p = new Process();
+                        p.StartInfo.UseShellExecute = false;
+                        p.StartInfo.CreateNoWindow = true;
+                        p.StartInfo.FileName = "bcdedit.exe";
+                        p.StartInfo.Arguments = cmd;
+                        p.Start();
+                        p.WaitForExit();
+                        if (p.ExitCode != 0)
+                        {
+                            throw new Exception();//手动抛出异常以终止操作
+                        }
+                        else
+                        {
+                            progressBar1.Value += 1;
+                        }
+
+                    }
+                    SaveISOFile("Tempfile.iso", Environment.CurrentDirectory);
+                    string isoPath = Environment.CurrentDirectory + "\\Tempfile.iso";
+                    progressBar1.Value += 1;
+                    ExtractISO(isoPath, systempar + "\\");
                     progressBar1.Value += 1;
                     string[] uninstall = { "bcdedit >nul",
                                         "if not ERRORLEVEL 1 goto uacOK",
@@ -699,17 +704,17 @@ namespace WindowsFormsApp1
                     }
                     MessageBox.Show("安装成功！感谢您使用ComPE！。", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     progressBar1.Value = 0;
-                        button9.Text = "安装到系统磁盘";
-                        button9.Enabled = true;
+                    button9.Text = "安装到系统磁盘";
+                    button9.Enabled = true;
                 }
-                    catch
-                    {
-                        MessageBox.Show("安装失败！请检查是否还有空间。", "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch
+                {
+                    MessageBox.Show("安装失败！请检查是否还有空间。", "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     progressBar1.Value = 0;
                     button9.Text = "安装到系统磁盘";
                     button9.Enabled = true;
                 }
-                }
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -743,7 +748,7 @@ namespace WindowsFormsApp1
             if (tabControl1.SelectedTab == tabPage1)
             {
                 pictureBox2.Location = new Point(pictureBox2.Location.X, button2.Location.Y + flowLayoutPanel1.Location.Y);
-                pictureBox3.Location = new Point(pictureBox2.Location.X+pictureBox1.Width-pictureBox3.Width / 2 * 3+1, button2.Location.Y + flowLayoutPanel1.Location.Y);
+                pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button2.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = true;
                 button2.Enabled = false;
                 button1.Enabled = true;
@@ -753,7 +758,7 @@ namespace WindowsFormsApp1
             else if (tabControl1.SelectedTab == tabPage2)
             {
                 pictureBox2.Location = new Point(pictureBox2.Location.X, button1.Location.Y + flowLayoutPanel1.Location.Y);
-                pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3+1, button1.Location.Y + flowLayoutPanel1.Location.Y); 
+                pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button1.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = false;
                 button2.Enabled = true;
                 button3.Enabled = true;
@@ -763,18 +768,27 @@ namespace WindowsFormsApp1
             else if (tabControl1.SelectedTab == tabPage3)
             {
                 pictureBox2.Location = new Point(pictureBox2.Location.X, button3.Location.Y + flowLayoutPanel1.Location.Y);
-                pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3+1, button3.Location.Y + flowLayoutPanel1.Location.Y);
+                pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button3.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = true;
                 button2.Enabled = true;
                 button3.Enabled = false;
                 label21.Location = new Point(66, 254);
                 label21.Text = button3.Text;
+                //MoveBlock(button3.Location.Y + flowLayoutPanel1.Location.Y);
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        void MoveBlock(int y)
         {
-            //Form4.ActiveForm.Location = Location;
+            double y1 = pictureBox2.Location.Y;
+            double va = (y - y1) / 114612037;
+            double v = va * 2;
+            double a = v / 114612037;
+            while (pictureBox2.Top != y)
+            {
+                v += a;
+                pictureBox2.Top += ((int)v);
+            }
         }
     }
 }
