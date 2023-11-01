@@ -747,48 +747,75 @@ namespace WindowsFormsApp1
         {
             if (tabControl1.SelectedTab == tabPage1)
             {
-                pictureBox2.Location = new Point(pictureBox2.Location.X, button2.Location.Y + flowLayoutPanel1.Location.Y);
-                pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button2.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = true;
                 button2.Enabled = false;
-                button1.Enabled = true;
+                button3.Enabled = true;
                 label21.Location = new Point(70, 134);
                 label21.Text = button2.Text;
+                MoveBlock(button2.Location.Y + flowLayoutPanel1.Location.Y);
             }
             else if (tabControl1.SelectedTab == tabPage2)
             {
-                pictureBox2.Location = new Point(pictureBox2.Location.X, button1.Location.Y + flowLayoutPanel1.Location.Y);
-                pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button1.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = false;
                 button2.Enabled = true;
                 button3.Enabled = true;
                 label21.Location = new Point(70, 194);
                 label21.Text = button1.Text;
+                MoveBlock(button1.Location.Y + flowLayoutPanel1.Location.Y);
             }
             else if (tabControl1.SelectedTab == tabPage3)
             {
-                pictureBox2.Location = new Point(pictureBox2.Location.X, button3.Location.Y + flowLayoutPanel1.Location.Y);
-                pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button3.Location.Y + flowLayoutPanel1.Location.Y);
+                //pictureBox2.Location = new Point(pictureBox2.Location.X, button3.Location.Y + flowLayoutPanel1.Location.Y);
+                //pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button3.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = true;
                 button2.Enabled = true;
                 button3.Enabled = false;
                 label21.Location = new Point(66, 254);
                 label21.Text = button3.Text;
-                //MoveBlock(button3.Location.Y + flowLayoutPanel1.Location.Y);
+                MoveBlock(button3.Location.Y + flowLayoutPanel1.Location.Y);
             }
         }
-
+        int v;
+        int ya;
+        int a = 0;
         void MoveBlock(int y)
         {
-            double y1 = pictureBox2.Location.Y;
-            double va = (y - y1) / 114612037;
-            double v = va * 2;
-            double a = v / 114612037;
-            while (pictureBox2.Top != y)
+            int y0 = pictureBox2.Top;
+            int dy = y - y0;
+            double vb = dy / 60;
+            int v0 = (int)(2 * vb);
+            v = v0;
+            if (v > 0)
             {
-                v += a;
-                pictureBox2.Top += ((int)v);
+                a = 1;
+            }else if (v < 0)
+            {
+                a = -1;
             }
+            timer1.Enabled = true;
+            timer2.Enabled = true;
+            ya = y;
+        }
+
+        void toMove()
+        {
+            v += a;
+            pictureBox2.Top += v;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            toMove();
+            pictureBox3.Top = pictureBox2.Top;
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+            timer2.Enabled = false;
+            pictureBox2.Top = ya;
+            pictureBox3.Top = pictureBox2.Top;
         }
     }
 }
