@@ -28,847 +28,885 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.Win7 = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.Win8 = new System.Windows.Forms.TabPage();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.Win10 = new System.Windows.Forms.TabPage();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.Win11 = new System.Windows.Forms.TabPage();
-            this.listView4 = new System.Windows.Forms.ListView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.Win7.SuspendLayout();
-            this.Win8.SuspendLayout();
-            this.Win10.SuspendLayout();
-            this.Win11.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            label1 = new System.Windows.Forms.Label();
+            button4 = new System.Windows.Forms.Button();
+            button5 = new System.Windows.Forms.Button();
+            button3 = new System.Windows.Forms.Button();
+            button1 = new System.Windows.Forms.Button();
+            button2 = new System.Windows.Forms.Button();
+            flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            tabPage4 = new System.Windows.Forms.TabPage();
+            label15 = new System.Windows.Forms.Label();
+            tabControl2 = new System.Windows.Forms.TabControl();
+            Win7 = new System.Windows.Forms.TabPage();
+            listView1 = new System.Windows.Forms.ListView();
+            Win8 = new System.Windows.Forms.TabPage();
+            listView2 = new System.Windows.Forms.ListView();
+            Win10 = new System.Windows.Forms.TabPage();
+            listView3 = new System.Windows.Forms.ListView();
+            Win11 = new System.Windows.Forms.TabPage();
+            listView4 = new System.Windows.Forms.ListView();
+            tabPage3 = new System.Windows.Forms.TabPage();
+            textBox4 = new System.Windows.Forms.TextBox();
+            textBox3 = new System.Windows.Forms.TextBox();
+            button9 = new System.Windows.Forms.Button();
+            label12 = new System.Windows.Forms.Label();
+            label13 = new System.Windows.Forms.Label();
+            label14 = new System.Windows.Forms.Label();
+            label16 = new System.Windows.Forms.Label();
+            tabPage2 = new System.Windows.Forms.TabPage();
+            label19 = new System.Windows.Forms.Label();
+            label18 = new System.Windows.Forms.Label();
+            comboBox3 = new System.Windows.Forms.ComboBox();
+            button10 = new System.Windows.Forms.Button();
+            label10 = new System.Windows.Forms.Label();
+            button8 = new System.Windows.Forms.Button();
+            label9 = new System.Windows.Forms.Label();
+            label8 = new System.Windows.Forms.Label();
+            textBox2 = new System.Windows.Forms.TextBox();
+            label6 = new System.Windows.Forms.Label();
+            comboBox2 = new System.Windows.Forms.ComboBox();
+            label5 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            comboBox1 = new System.Windows.Forms.ComboBox();
+            tabPage1 = new System.Windows.Forms.TabPage();
+            label20 = new System.Windows.Forms.Label();
+            textBox5 = new System.Windows.Forms.TextBox();
+            textBox1 = new System.Windows.Forms.TextBox();
+            label11 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            button7 = new System.Windows.Forms.Button();
+            label2 = new System.Windows.Forms.Label();
+            button6 = new System.Windows.Forms.Button();
+            tabControl1 = new System.Windows.Forms.TabControl();
+            label17 = new System.Windows.Forms.Label();
+            pictureBox2 = new System.Windows.Forms.PictureBox();
+            pictureBox3 = new System.Windows.Forms.PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
+            progressBar1 = new System.Windows.Forms.ProgressBar();
+            label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
+            tabPage4.SuspendLayout();
+            tabControl2.SuspendLayout();
+            Win7.SuspendLayout();
+            Win8.SuspendLayout();
+            Win10.SuspendLayout();
+            Win11.SuspendLayout();
+            tabPage3.SuspendLayout();
+            tabPage2.SuspendLayout();
+            tabPage1.SuspendLayout();
+            tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new System.Drawing.Point(18, 13);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(208, 60);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            pictureBox1.DoubleClick += pictureBox1_DoubleClick;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(13, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 12);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "纯净安全且简洁的Windows PE维护系统";
+            label1.AutoSize = true;
+            label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            label1.Location = new System.Drawing.Point(12, 83);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(223, 17);
+            label1.TabIndex = 1;
+            label1.Text = "纯净安全且简洁的Windows PE维护系统";
             // 
             // button4
             // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(3, 243);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(207, 54);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "重启计算机";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button4.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button4.ForeColor = System.Drawing.SystemColors.Control;
+            button4.Image = (System.Drawing.Image)resources.GetObject("button4.Image");
+            button4.Location = new System.Drawing.Point(4, 257);
+            button4.Margin = new System.Windows.Forms.Padding(4);
+            button4.Name = "button4";
+            button4.Size = new System.Drawing.Size(187, 56);
+            button4.TabIndex = 3;
+            button4.Text = "重启计算机";
+            button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
-            this.button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(3, 183);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(207, 54);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "下载Windows镜像";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button5.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button5.ForeColor = System.Drawing.SystemColors.Control;
+            button5.Image = (System.Drawing.Image)resources.GetObject("button5.Image");
+            button5.Location = new System.Drawing.Point(4, 193);
+            button5.Margin = new System.Windows.Forms.Padding(4);
+            button5.Name = "button5";
+            button5.Size = new System.Drawing.Size(187, 56);
+            button5.TabIndex = 4;
+            button5.Text = "下载Windows镜像";
+            button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button3
             // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(3, 123);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 54);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "安装到系统磁盘";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button3.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button3.ForeColor = System.Drawing.SystemColors.Control;
+            button3.Image = (System.Drawing.Image)resources.GetObject("button3.Image");
+            button3.Location = new System.Drawing.Point(4, 129);
+            button3.Margin = new System.Windows.Forms.Padding(4);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(187, 56);
+            button3.TabIndex = 2;
+            button3.Text = "安装到系统磁盘";
+            button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button1
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(3, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 54);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "制作USB启动盘";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button1.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button1.ForeColor = System.Drawing.SystemColors.Control;
+            button1.Image = (System.Drawing.Image)resources.GetObject("button1.Image");
+            button1.Location = new System.Drawing.Point(4, 68);
+            button1.Margin = new System.Windows.Forms.Padding(4);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(187, 53);
+            button1.TabIndex = 0;
+            button1.Text = "制作USB启动盘";
+            button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(207, 54);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "保存成ISO镜像";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button2.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button2.ForeColor = System.Drawing.SystemColors.Control;
+            button2.Image = (System.Drawing.Image)resources.GetObject("button2.Image");
+            button2.Location = new System.Drawing.Point(4, 4);
+            button2.Margin = new System.Windows.Forms.Padding(4);
+            button2.Name = "button2";
+            button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            button2.Size = new System.Drawing.Size(187, 56);
+            button2.TabIndex = 1;
+            button2.Text = "保存成ISO镜像";
+            button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 112);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(210, 306);
-            this.flowLayoutPanel1.TabIndex = 2;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(0, 424);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(624, 17);
-            this.progressBar1.TabIndex = 3;
+            flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            flowLayoutPanel1.Controls.Add(button2);
+            flowLayoutPanel1.Controls.Add(button1);
+            flowLayoutPanel1.Controls.Add(button3);
+            flowLayoutPanel1.Controls.Add(button5);
+            flowLayoutPanel1.Controls.Add(button4);
+            flowLayoutPanel1.Location = new System.Drawing.Point(22, 107);
+            flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new System.Drawing.Size(195, 350);
+            flowLayoutPanel1.TabIndex = 2;
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.tabPage4.Controls.Add(this.label15);
-            this.tabPage4.Controls.Add(this.tabControl2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 14);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(375, 341);
-            this.tabPage4.TabIndex = 3;
+            tabPage4.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            tabPage4.Controls.Add(label15);
+            tabPage4.Controls.Add(tabControl2);
+            tabPage4.Location = new System.Drawing.Point(4, 14);
+            tabPage4.Margin = new System.Windows.Forms.Padding(4);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new System.Windows.Forms.Padding(4);
+            tabPage4.Size = new System.Drawing.Size(364, 337);
+            tabPage4.TabIndex = 3;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label15.Location = new System.Drawing.Point(211, 7);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(143, 12);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "感谢HotPE提供镜像下载！";
+            label15.AutoSize = true;
+            label15.ForeColor = System.Drawing.Color.RoyalBlue;
+            label15.Location = new System.Drawing.Point(246, 10);
+            label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(151, 17);
+            label15.TabIndex = 2;
+            label15.Text = "感谢HotPE提供镜像下载！";
             // 
             // tabControl2
             // 
-            this.tabControl2.Controls.Add(this.Win7);
-            this.tabControl2.Controls.Add(this.Win8);
-            this.tabControl2.Controls.Add(this.Win10);
-            this.tabControl2.Controls.Add(this.Win11);
-            this.tabControl2.Location = new System.Drawing.Point(3, 3);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(366, 345);
-            this.tabControl2.TabIndex = 0;
+            tabControl2.Controls.Add(Win7);
+            tabControl2.Controls.Add(Win8);
+            tabControl2.Controls.Add(Win10);
+            tabControl2.Controls.Add(Win11);
+            tabControl2.Location = new System.Drawing.Point(4, 4);
+            tabControl2.Margin = new System.Windows.Forms.Padding(4);
+            tabControl2.Name = "tabControl2";
+            tabControl2.SelectedIndex = 0;
+            tabControl2.Size = new System.Drawing.Size(427, 489);
+            tabControl2.TabIndex = 0;
             // 
             // Win7
             // 
-            this.Win7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Win7.Controls.Add(this.listView1);
-            this.Win7.Location = new System.Drawing.Point(4, 22);
-            this.Win7.Name = "Win7";
-            this.Win7.Padding = new System.Windows.Forms.Padding(3);
-            this.Win7.Size = new System.Drawing.Size(358, 319);
-            this.Win7.TabIndex = 0;
-            this.Win7.Text = "Win7";
+            Win7.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            Win7.Controls.Add(listView1);
+            Win7.Location = new System.Drawing.Point(4, 26);
+            Win7.Margin = new System.Windows.Forms.Padding(4);
+            Win7.Name = "Win7";
+            Win7.Padding = new System.Windows.Forms.Padding(4);
+            Win7.Size = new System.Drawing.Size(419, 459);
+            Win7.TabIndex = 0;
+            Win7.Text = "Win7";
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.listView1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(5, 8);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(348, 303);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.SmallIcon;
+            listView1.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            listView1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            listView1.Location = new System.Drawing.Point(6, 11);
+            listView1.Margin = new System.Windows.Forms.Padding(4);
+            listView1.Name = "listView1";
+            listView1.Size = new System.Drawing.Size(405, 428);
+            listView1.TabIndex = 1;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = System.Windows.Forms.View.SmallIcon;
             // 
             // Win8
             // 
-            this.Win8.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
-            this.Win8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Win8.Controls.Add(this.listView2);
-            this.Win8.Location = new System.Drawing.Point(4, 22);
-            this.Win8.Name = "Win8";
-            this.Win8.Padding = new System.Windows.Forms.Padding(3);
-            this.Win8.Size = new System.Drawing.Size(358, 319);
-            this.Win8.TabIndex = 1;
-            this.Win8.Text = "Win8.x";
+            Win8.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            Win8.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            Win8.Controls.Add(listView2);
+            Win8.Location = new System.Drawing.Point(4, 26);
+            Win8.Margin = new System.Windows.Forms.Padding(4);
+            Win8.Name = "Win8";
+            Win8.Padding = new System.Windows.Forms.Padding(4);
+            Win8.Size = new System.Drawing.Size(419, 459);
+            Win8.TabIndex = 1;
+            Win8.Text = "Win8.x";
             // 
             // listView2
             // 
-            this.listView2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.listView2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(5, 8);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(348, 303);
-            this.listView2.TabIndex = 1;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.SmallIcon;
+            listView2.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            listView2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            listView2.Location = new System.Drawing.Point(6, 11);
+            listView2.Margin = new System.Windows.Forms.Padding(4);
+            listView2.Name = "listView2";
+            listView2.Size = new System.Drawing.Size(405, 428);
+            listView2.TabIndex = 1;
+            listView2.UseCompatibleStateImageBehavior = false;
+            listView2.View = System.Windows.Forms.View.SmallIcon;
             // 
             // Win10
             // 
-            this.Win10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Win10.Controls.Add(this.listView3);
-            this.Win10.Location = new System.Drawing.Point(4, 22);
-            this.Win10.Name = "Win10";
-            this.Win10.Size = new System.Drawing.Size(358, 319);
-            this.Win10.TabIndex = 2;
-            this.Win10.Text = "Win10";
+            Win10.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            Win10.Controls.Add(listView3);
+            Win10.Location = new System.Drawing.Point(4, 26);
+            Win10.Margin = new System.Windows.Forms.Padding(4);
+            Win10.Name = "Win10";
+            Win10.Size = new System.Drawing.Size(419, 459);
+            Win10.TabIndex = 2;
+            Win10.Text = "Win10";
             // 
             // listView3
             // 
-            this.listView3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.listView3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(5, 8);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(348, 303);
-            this.listView3.TabIndex = 1;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.SmallIcon;
+            listView3.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            listView3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            listView3.Location = new System.Drawing.Point(6, 11);
+            listView3.Margin = new System.Windows.Forms.Padding(4);
+            listView3.Name = "listView3";
+            listView3.Size = new System.Drawing.Size(405, 428);
+            listView3.TabIndex = 1;
+            listView3.UseCompatibleStateImageBehavior = false;
+            listView3.View = System.Windows.Forms.View.SmallIcon;
             // 
             // Win11
             // 
-            this.Win11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Win11.Controls.Add(this.listView4);
-            this.Win11.Location = new System.Drawing.Point(4, 22);
-            this.Win11.Name = "Win11";
-            this.Win11.Size = new System.Drawing.Size(358, 319);
-            this.Win11.TabIndex = 3;
-            this.Win11.Text = "Win11";
+            Win11.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            Win11.Controls.Add(listView4);
+            Win11.Location = new System.Drawing.Point(4, 26);
+            Win11.Margin = new System.Windows.Forms.Padding(4);
+            Win11.Name = "Win11";
+            Win11.Size = new System.Drawing.Size(419, 459);
+            Win11.TabIndex = 3;
+            Win11.Text = "Win11";
             // 
             // listView4
             // 
-            this.listView4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.listView4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(5, 8);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(348, 303);
-            this.listView4.TabIndex = 1;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            this.listView4.View = System.Windows.Forms.View.SmallIcon;
+            listView4.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            listView4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            listView4.Location = new System.Drawing.Point(6, 11);
+            listView4.Margin = new System.Windows.Forms.Padding(4);
+            listView4.Name = "listView4";
+            listView4.Size = new System.Drawing.Size(405, 428);
+            listView4.TabIndex = 1;
+            listView4.UseCompatibleStateImageBehavior = false;
+            listView4.View = System.Windows.Forms.View.SmallIcon;
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.tabPage3.Controls.Add(this.textBox4);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.button9);
-            this.tabPage3.Controls.Add(this.label12);
-            this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.label16);
-            this.tabPage3.Location = new System.Drawing.Point(4, 14);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(375, 341);
-            this.tabPage3.TabIndex = 2;
+            tabPage3.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            tabPage3.Controls.Add(textBox4);
+            tabPage3.Controls.Add(textBox3);
+            tabPage3.Controls.Add(button9);
+            tabPage3.Controls.Add(label12);
+            tabPage3.Controls.Add(label13);
+            tabPage3.Controls.Add(label14);
+            tabPage3.Controls.Add(label16);
+            tabPage3.Location = new System.Drawing.Point(4, 14);
+            tabPage3.Margin = new System.Windows.Forms.Padding(4);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new System.Drawing.Size(364, 337);
+            tabPage3.TabIndex = 2;
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox4.Location = new System.Drawing.Point(145, 124);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 21);
-            this.textBox4.TabIndex = 19;
-            this.textBox4.Text = "5";
-            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
+            textBox4.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            textBox4.ForeColor = System.Drawing.SystemColors.Control;
+            textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            textBox4.Location = new System.Drawing.Point(176, 112);
+            textBox4.Margin = new System.Windows.Forms.Padding(4);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new System.Drawing.Size(139, 23);
+            textBox4.TabIndex = 19;
+            textBox4.Text = "5";
+            textBox4.KeyPress += textBox4_KeyPress;
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox3.Location = new System.Drawing.Point(145, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 21);
-            this.textBox3.TabIndex = 15;
-            this.textBox3.Text = "进入ComPE维护系统";
+            textBox3.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            textBox3.ForeColor = System.Drawing.SystemColors.Control;
+            textBox3.Location = new System.Drawing.Point(176, 143);
+            textBox3.Margin = new System.Windows.Forms.Padding(4);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new System.Drawing.Size(139, 23);
+            textBox3.TabIndex = 15;
+            textBox3.Text = "进入ComPE维护系统";
             // 
             // button9
             // 
-            this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.SystemColors.Control;
-            this.button9.Location = new System.Drawing.Point(122, 304);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(132, 44);
-            this.button9.TabIndex = 18;
-            this.button9.Text = "安装到系统磁盘";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button9.ForeColor = System.Drawing.SystemColors.Control;
+            button9.Location = new System.Drawing.Point(128, 290);
+            button9.Margin = new System.Windows.Forms.Padding(4);
+            button9.Name = "button9";
+            button9.Size = new System.Drawing.Size(107, 41);
+            button9.TabIndex = 18;
+            button9.Text = "安装到系统磁盘";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(32, 225);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(305, 24);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "注意：本操作设计引导修改，\r\n建议关闭反病毒软件后继续操作，否则可能导致写入失败";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label12.AutoSize = true;
+            label12.ForeColor = System.Drawing.SystemColors.Control;
+            label12.Location = new System.Drawing.Point(23, 198);
+            label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(308, 34);
+            label12.TabIndex = 17;
+            label12.Text = "注意：本操作设计引导修改，\r\n建议关闭反病毒软件后继续操作，否则可能导致写入失败";
+            label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(20, 61);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(335, 36);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "本界面将帮助您将ComPE维护系统安装到系统启动项，\r\n以方便您启动计算机的时候可直接选择是否进入ComPE维护系统\r\n\r\n";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label13.AutoSize = true;
+            label13.ForeColor = System.Drawing.SystemColors.Control;
+            label13.Location = new System.Drawing.Point(8, 42);
+            label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(349, 51);
+            label13.TabIndex = 16;
+            label13.Text = "本界面将帮助您将ComPE维护系统安装到系统启动项，\r\n以方便您启动计算机的时候可直接选择是否进入ComPE维护系统\r\n\r\n";
+            label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(20, 162);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(125, 12);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "请输入引导菜单名称：";
+            label14.AutoSize = true;
+            label14.ForeColor = System.Drawing.SystemColors.Control;
+            label14.Location = new System.Drawing.Point(40, 149);
+            label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(128, 17);
+            label14.TabIndex = 14;
+            label14.Text = "请输入引导菜单名称：";
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.SystemColors.Control;
-            this.label16.Location = new System.Drawing.Point(43, 128);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(101, 12);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "请输入等待时间：";
+            label16.AutoSize = true;
+            label16.ForeColor = System.Drawing.SystemColors.Control;
+            label16.Location = new System.Drawing.Point(64, 115);
+            label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label16.Name = "label16";
+            label16.Size = new System.Drawing.Size(104, 17);
+            label16.TabIndex = 11;
+            label16.Text = "请输入等待时间：";
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.comboBox3);
-            this.tabPage2.Controls.Add(this.button10);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.button8);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.comboBox2);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 14);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(375, 341);
-            this.tabPage2.TabIndex = 1;
+            tabPage2.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            tabPage2.Controls.Add(label19);
+            tabPage2.Controls.Add(label18);
+            tabPage2.Controls.Add(comboBox3);
+            tabPage2.Controls.Add(button10);
+            tabPage2.Controls.Add(label10);
+            tabPage2.Controls.Add(button8);
+            tabPage2.Controls.Add(label9);
+            tabPage2.Controls.Add(label8);
+            tabPage2.Controls.Add(textBox2);
+            tabPage2.Controls.Add(label6);
+            tabPage2.Controls.Add(comboBox2);
+            tabPage2.Controls.Add(label5);
+            tabPage2.Controls.Add(label4);
+            tabPage2.Controls.Add(comboBox1);
+            tabPage2.Location = new System.Drawing.Point(4, 14);
+            tabPage2.Margin = new System.Windows.Forms.Padding(4);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            tabPage2.Size = new System.Drawing.Size(364, 337);
+            tabPage2.TabIndex = 1;
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.SystemColors.Control;
-            this.label19.Location = new System.Drawing.Point(311, 79);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(41, 12);
-            this.label19.TabIndex = 13;
-            this.label19.Text = "SIZEGB";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label19.AutoSize = true;
+            label19.ForeColor = System.Drawing.SystemColors.Control;
+            label19.Location = new System.Drawing.Point(307, 68);
+            label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label19.Name = "label19";
+            label19.Size = new System.Drawing.Size(50, 17);
+            label19.TabIndex = 13;
+            label19.Text = "SIZEGB";
+            label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.Control;
-            this.label18.Location = new System.Drawing.Point(19, 114);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(137, 12);
-            this.label18.TabIndex = 12;
-            this.label18.Text = "请选择指派的分区盘符：";
+            label18.AutoSize = true;
+            label18.ForeColor = System.Drawing.SystemColors.Control;
+            label18.Location = new System.Drawing.Point(19, 98);
+            label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label18.Name = "label18";
+            label18.Size = new System.Drawing.Size(140, 17);
+            label18.TabIndex = 12;
+            label18.Text = "请选择指派的分区盘符：";
             // 
             // comboBox3
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(156, 109);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(149, 20);
-            this.comboBox3.TabIndex = 11;
+            comboBox3.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            comboBox3.ForeColor = System.Drawing.SystemColors.Control;
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new System.Drawing.Point(162, 95);
+            comboBox3.Margin = new System.Windows.Forms.Padding(4);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new System.Drawing.Size(138, 25);
+            comboBox3.TabIndex = 11;
             // 
             // button10
             // 
-            this.button10.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.SystemColors.Control;
-            this.button10.Location = new System.Drawing.Point(139, 206);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(96, 23);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "刷新磁盘列表";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            button10.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button10.ForeColor = System.Drawing.SystemColors.Control;
+            button10.Location = new System.Drawing.Point(135, 187);
+            button10.Margin = new System.Windows.Forms.Padding(4);
+            button10.Name = "button10";
+            button10.Size = new System.Drawing.Size(90, 26);
+            button10.TabIndex = 10;
+            button10.Text = "刷新磁盘列表";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(66, 273);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(245, 12);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "当前模式选择：硬盘仿真模式，启动速度较快";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label10.AutoSize = true;
+            label10.ForeColor = System.Drawing.SystemColors.Control;
+            label10.Location = new System.Drawing.Point(62, 267);
+            label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(248, 17);
+            label10.TabIndex = 9;
+            label10.Text = "当前模式选择：硬盘仿真模式，启动速度较快";
+            label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button8
             // 
-            this.button8.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.Control;
-            this.button8.Location = new System.Drawing.Point(122, 304);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(132, 44);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "制作USB启动盘";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            button8.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button8.ForeColor = System.Drawing.SystemColors.Control;
+            button8.Location = new System.Drawing.Point(128, 290);
+            button8.Margin = new System.Windows.Forms.Padding(4);
+            button8.Name = "button8";
+            button8.Size = new System.Drawing.Size(107, 41);
+            button8.TabIndex = 8;
+            button8.Text = "制作USB启动盘";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(27, 234);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(317, 36);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "注意：安装到的磁盘会清除对应磁盘的所有分区，\r\n故请注意安装前备份好磁盘内所有的数据\r\n刷新磁盘列表的时候可能会有短暂未响应状态，属正常现象";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label9.AutoSize = true;
+            label9.ForeColor = System.Drawing.SystemColors.Control;
+            label9.Location = new System.Drawing.Point(31, 215);
+            label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(320, 51);
+            label9.TabIndex = 7;
+            label9.Text = "注意：安装到的磁盘会清除对应磁盘的所有分区，\r\n故请注意安装前备份好磁盘内所有的数据\r\n刷新磁盘列表的时候可能会有短暂未响应状态，属正常现象";
+            label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(34, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(317, 36);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "本界面将帮助您将ComPE维护系统安装到U盘或移动硬盘，\r\n方便在计算机无法启动的时候以及在其他计算机上紧急使用\r\n\r\n";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label8.AutoSize = true;
+            label8.ForeColor = System.Drawing.SystemColors.Control;
+            label8.Location = new System.Drawing.Point(25, 20);
+            label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(322, 34);
+            label8.TabIndex = 6;
+            label8.Text = "本界面将帮助您将ComPE维护系统安装到U盘或移动硬盘，\r\n方便在计算机无法启动的时候以及在其他计算机上紧急使用\r\n";
+            label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox2.Location = new System.Drawing.Point(156, 177);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 21);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "ComPE启动盘";
+            textBox2.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            textBox2.ForeColor = System.Drawing.SystemColors.Control;
+            textBox2.Location = new System.Drawing.Point(162, 160);
+            textBox2.Margin = new System.Windows.Forms.Padding(4);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new System.Drawing.Size(138, 23);
+            textBox2.TabIndex = 5;
+            textBox2.Text = "ComPE启动盘";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(79, 177);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 12);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "请输入卷标：";
+            label6.AutoSize = true;
+            label6.ForeColor = System.Drawing.SystemColors.Control;
+            label6.Location = new System.Drawing.Point(80, 160);
+            label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(80, 17);
+            label6.TabIndex = 4;
+            label6.Text = "请输入卷标：";
             // 
             // comboBox2
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "USB-HDD",
-            "USB-ZIP"});
-            this.comboBox2.Location = new System.Drawing.Point(156, 143);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(149, 20);
-            this.comboBox2.TabIndex = 3;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            comboBox2.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            comboBox2.ForeColor = System.Drawing.SystemColors.Control;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "USB-HDD", "USB-ZIP" });
+            comboBox2.Location = new System.Drawing.Point(162, 128);
+            comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new System.Drawing.Size(138, 25);
+            comboBox2.TabIndex = 3;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(31, 147);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 12);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "请选择磁盘写入模式：";
+            label5.AutoSize = true;
+            label5.ForeColor = System.Drawing.SystemColors.Control;
+            label5.Location = new System.Drawing.Point(31, 131);
+            label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(128, 17);
+            label5.TabIndex = 2;
+            label5.Text = "请选择磁盘写入模式：";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(31, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 12);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "请选择安装到的磁盘：";
+            label4.AutoSize = true;
+            label4.ForeColor = System.Drawing.SystemColors.Control;
+            label4.Location = new System.Drawing.Point(31, 66);
+            label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(128, 17);
+            label4.TabIndex = 1;
+            label4.Text = "请选择安装到的磁盘：";
+            label4.Click += label4_Click;
             // 
             // comboBox1
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(156, 75);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 20);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            comboBox1.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            comboBox1.ForeColor = System.Drawing.SystemColors.Control;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new System.Drawing.Point(162, 63);
+            comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new System.Drawing.Size(138, 25);
+            comboBox1.TabIndex = 0;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.tabPage1.Controls.Add(this.label20);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.button7);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.button6);
-            this.tabPage1.Location = new System.Drawing.Point(4, 14);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(375, 341);
-            this.tabPage1.TabIndex = 0;
+            tabPage1.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            tabPage1.Controls.Add(label20);
+            tabPage1.Controls.Add(textBox5);
+            tabPage1.Controls.Add(textBox1);
+            tabPage1.Controls.Add(label11);
+            tabPage1.Controls.Add(label7);
+            tabPage1.Controls.Add(button7);
+            tabPage1.Controls.Add(label2);
+            tabPage1.Controls.Add(button6);
+            tabPage1.Location = new System.Drawing.Point(4, 14);
+            tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            tabPage1.Size = new System.Drawing.Size(364, 337);
+            tabPage1.TabIndex = 0;
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.SystemColors.Control;
-            this.label20.Location = new System.Drawing.Point(42, 227);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(287, 24);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "注意：默认情况下，将ISO保存到程序运行同级目录下\r\n建议您将ISO保存到自己方便寻找的文件夹下";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label20.AutoSize = true;
+            label20.ForeColor = System.Drawing.SystemColors.Control;
+            label20.Location = new System.Drawing.Point(46, 205);
+            label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label20.Name = "label20";
+            label20.Size = new System.Drawing.Size(293, 34);
+            label20.TabIndex = 18;
+            label20.Text = "注意：默认情况下，将ISO保存到程序运行同级目录下\r\n建议您将ISO保存到自己方便寻找的文件夹下";
+            label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBox5
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox5.Location = new System.Drawing.Point(105, 161);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(166, 21);
-            this.textBox5.TabIndex = 6;
-            this.textBox5.Text = "ComPE_Release.iso";
+            textBox5.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            textBox5.ForeColor = System.Drawing.SystemColors.Control;
+            textBox5.Location = new System.Drawing.Point(111, 134);
+            textBox5.Margin = new System.Windows.Forms.Padding(4);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new System.Drawing.Size(193, 23);
+            textBox5.TabIndex = 6;
+            textBox5.Text = "ComPE_Release.iso";
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox1.Location = new System.Drawing.Point(105, 126);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 21);
-            this.textBox1.TabIndex = 0;
+            textBox1.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            textBox1.ForeColor = System.Drawing.SystemColors.Control;
+            textBox1.Location = new System.Drawing.Point(111, 99);
+            textBox1.Margin = new System.Windows.Forms.Padding(4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(193, 23);
+            textBox1.TabIndex = 0;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(23, 164);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 12);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "ISO文件名：";
+            label11.AutoSize = true;
+            label11.ForeColor = System.Drawing.SystemColors.Control;
+            label11.Location = new System.Drawing.Point(38, 137);
+            label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(77, 17);
+            label11.TabIndex = 5;
+            label11.Text = "ISO文件名：";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(60, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(269, 24);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "本界面将帮助您将ComPE维护系统保存为ISO镜像，\r\n方便进行多方面使用，多设备转移";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            label7.AutoSize = true;
+            label7.ForeColor = System.Drawing.SystemColors.Control;
+            label7.Location = new System.Drawing.Point(46, 46);
+            label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(286, 34);
+            label7.TabIndex = 4;
+            label7.Text = "本界面将帮助您将ComPE维护系统保存为ISO镜像，\r\n方便进行多方面使用，多设备转移";
+            label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button7
             // 
-            this.button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.Control;
-            this.button7.Location = new System.Drawing.Point(122, 304);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(132, 44);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "保存文件";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button7.ForeColor = System.Drawing.SystemColors.Control;
+            button7.Location = new System.Drawing.Point(128, 290);
+            button7.Margin = new System.Windows.Forms.Padding(4);
+            button7.Name = "button7";
+            button7.Size = new System.Drawing.Size(107, 41);
+            button7.TabIndex = 3;
+            button7.Text = "保存文件";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(22, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ISO保存路径：";
+            label2.AutoSize = true;
+            label2.ForeColor = System.Drawing.SystemColors.Control;
+            label2.Location = new System.Drawing.Point(26, 102);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(89, 17);
+            label2.TabIndex = 2;
+            label2.Text = "ISO保存路径：";
             // 
             // button6
             // 
-            this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.Control;
-            this.button6.Location = new System.Drawing.Point(279, 124);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "选择文件夹";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            button6.ForeColor = System.Drawing.SystemColors.Control;
+            button6.Location = new System.Drawing.Point(141, 165);
+            button6.Margin = new System.Windows.Forms.Padding(4);
+            button6.Name = "button6";
+            button6.Size = new System.Drawing.Size(80, 27);
+            button6.TabIndex = 1;
+            button6.Text = "选择文件夹";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // tabControl1
             // 
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.ItemSize = new System.Drawing.Size(50, 10);
-            this.tabControl1.Location = new System.Drawing.Point(229, 50);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(383, 359);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 4;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(475, 412);
-            this.label3.Name = "label3";
-            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(149, 12);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "当前计算机启动方案：BOOT";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
+            tabControl1.ItemSize = new System.Drawing.Size(50, 10);
+            tabControl1.Location = new System.Drawing.Point(233, 45);
+            tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new System.Drawing.Size(372, 355);
+            tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            tabControl1.TabIndex = 4;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label17.Location = new System.Drawing.Point(281, 23);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(299, 12);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "Copyright © 2023 ComPE-纯净且简洁的Windows PE系统";
+            label17.AutoSize = true;
+            label17.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            label17.Location = new System.Drawing.Point(254, 16);
+            label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label17.Name = "label17";
+            label17.Size = new System.Drawing.Size(330, 17);
+            label17.TabIndex = 6;
+            label17.Text = "Copyright © 2023 ComPE-纯净且简洁的Windows PE系统";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 115);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(10, 54);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(67, 254);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(119, 16);
-            this.label21.TabIndex = 8;
-            this.label21.Text = "安装到系统磁盘";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            pictureBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            pictureBox2.Location = new System.Drawing.Point(25, 111);
+            pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new System.Drawing.Size(10, 57);
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.pictureBox3.Location = new System.Drawing.Point(210, 115);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(10, 54);
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            pictureBox3.Location = new System.Drawing.Point(206, 112);
+            pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new System.Drawing.Size(10, 56);
+            pictureBox3.TabIndex = 10;
+            pictureBox3.TabStop = false;
             // 
             // timer1
             // 
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            timer1.Interval = 1;
+            timer1.Tick += timer1_Tick;
             // 
             // timer2
             // 
-            this.timer2.Interval = 155;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            timer2.Interval = 155;
+            timer2.Tick += timer2_Tick;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new System.Drawing.Point(0, 429);
+            progressBar1.Margin = new System.Windows.Forms.Padding(4);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new System.Drawing.Size(624, 12);
+            progressBar1.TabIndex = 20;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = System.Drawing.SystemColors.Control;
+            label3.Location = new System.Drawing.Point(458, 412);
+            label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            label3.Size = new System.Drawing.Size(163, 17);
+            label3.TabIndex = 21;
+            label3.Text = "当前计算机启动方案：BOOT";
+            label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(624, 441);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ComPE工具箱";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
-            this.Win7.ResumeLayout(false);
-            this.Win8.ResumeLayout(false);
-            this.Win10.ResumeLayout(false);
-            this.Win11.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            ClientSize = new System.Drawing.Size(624, 441);
+            Controls.Add(label3);
+            Controls.Add(progressBar1);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(label17);
+            Controls.Add(tabControl1);
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(label1);
+            Controls.Add(pictureBox1);
+            ForeColor = System.Drawing.SystemColors.ControlText;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Margin = new System.Windows.Forms.Padding(4);
+            MaximizeBox = false;
+            Name = "Form1";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "ComPE工具箱";
+            FormClosed += Form1_FormClosed;
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
+            tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
+            tabControl2.ResumeLayout(false);
+            Win7.ResumeLayout(false);
+            Win8.ResumeLayout(false);
+            Win10.ResumeLayout(false);
+            Win11.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -881,7 +919,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabControl tabControl2;
@@ -926,13 +963,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

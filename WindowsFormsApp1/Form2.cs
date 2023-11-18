@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
-      
+
         public Form2()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
         {
             GraphicsPath gPath = new GraphicsPath();
             Rectangle rect = new Rectangle(0, 5, this.Width, this.Height - 5);
-            gPath = GetRoundedRP(rect,360);
+            gPath = GetRoundedRP(rect, 360);
             this.Region = new Region(gPath);
         }
 

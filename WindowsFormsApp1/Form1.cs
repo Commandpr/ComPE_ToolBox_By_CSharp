@@ -123,10 +123,8 @@ namespace WindowsFormsApp1
             f.UpdateLabel("初始化窗口...");
             comboBox2.SelectedIndex = 0;
             button2.Enabled = false;
-            label21.Location = new Point(70, 134);
             pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button2.Location.Y + flowLayoutPanel1.Location.Y);
             pictureBox2.Location = new Point(pictureBox2.Location.X, button2.Location.Y + flowLayoutPanel1.Location.Y);
-            label21.Text = button2.Text;
             f.UpdateLabel("获取磁盘列表...");
             textBox1.Text = Environment.CurrentDirectory;
             tabControl1.ItemSize = new Size(0, 1);
@@ -136,13 +134,11 @@ namespace WindowsFormsApp1
             {
                 label3.Text = "当前计算机启动方案：UEFI";
                 boot = "UEFI";
-                label3.Location = new Point(475, 412);
             }
             else
             {
-                label3.Text = "当前计算机启动方案：Legacy/BIOS";
+                label3.Text = "当前计算机启动方案：BIOS";
                 boot = "BIOS";
-                label3.Location = new Point(435, 412);
             }
             comboBox1.SelectedIndex = 0;
             f.Hide();
@@ -213,7 +209,7 @@ namespace WindowsFormsApp1
             }
             comboBox3.SelectedIndex = 0;
         }
-        
+
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -249,10 +245,10 @@ namespace WindowsFormsApp1
                     fmt = "NTFS";
                 }
                 progressBar1.Value += 1;
-                    cov = "CONVERT MBR";
-                    active = "ACTIVE";
-                    createpar = "CREATE PAR PRI";
-                    formatfs = $"FORMAT FS={fmt} QUICK";
+                cov = "CONVERT MBR";
+                active = "ACTIVE";
+                createpar = "CREATE PAR PRI";
+                formatfs = $"FORMAT FS={fmt} QUICK";
 
                 progressBar1.Value += 1;
 
@@ -292,9 +288,9 @@ namespace WindowsFormsApp1
                 {
                     progressBar1.Value += 1;
                     string[] lines2 = new string[] { };
-                        lines2.Append("SELECT DISK " + GetDiskNumber(disk).ToString());
-                        lines2.Append("SELECT PAR 1");
-                        lines2.Append("SET ID=" + ids[comboBox2.SelectedIndex] + " OVERRIDE");
+                    lines2.Append("SELECT DISK " + GetDiskNumber(disk).ToString());
+                    lines2.Append("SELECT PAR 1");
+                    lines2.Append("SET ID=" + ids[comboBox2.SelectedIndex] + " OVERRIDE");
                     SaveISOFile("Tempfile.iso", Environment.CurrentDirectory);
                     progressBar1.Value += 1;
                     string isoPath = Environment.CurrentDirectory + "\\Tempfile.iso";
@@ -667,8 +663,6 @@ namespace WindowsFormsApp1
                 button1.Enabled = true;
                 button2.Enabled = false;
                 button3.Enabled = true;
-                label21.Location = new Point(70, 134);
-                label21.Text = button2.Text;
                 MoveBlock(button2.Location.Y + flowLayoutPanel1.Location.Y);
             }
             else if (tabControl1.SelectedTab == tabPage2)
@@ -676,8 +670,6 @@ namespace WindowsFormsApp1
                 button1.Enabled = false;
                 button2.Enabled = true;
                 button3.Enabled = true;
-                label21.Location = new Point(70, 194);
-                label21.Text = button1.Text;
                 MoveBlock(button1.Location.Y + flowLayoutPanel1.Location.Y);
             }
             else if (tabControl1.SelectedTab == tabPage3)
@@ -686,9 +678,7 @@ namespace WindowsFormsApp1
                 //pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button3.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = true;
                 button2.Enabled = true;
-                button3.Enabled = false;
-                label21.Location = new Point(66, 254);
-                label21.Text = button3.Text;
+                button3.Enabled = false;;
                 MoveBlock(button3.Location.Y + flowLayoutPanel1.Location.Y);
             }
         }
@@ -705,7 +695,8 @@ namespace WindowsFormsApp1
             if (v > 0)
             {
                 a = 1;
-            }else if (v < 0)
+            }
+            else if (v < 0)
             {
                 a = -1;
             }
@@ -735,6 +726,14 @@ namespace WindowsFormsApp1
             pictureBox3.Top = pictureBox2.Top;
         }
 
-        
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

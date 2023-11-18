@@ -29,69 +29,72 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(12, 284);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 12);
-            this.label1.TabIndex = 11;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            label1.Location = new System.Drawing.Point(15, 267);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(0, 12);
+            label1.TabIndex = 11;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(139, 214);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 23);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Command Open More";
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            label2.Location = new System.Drawing.Point(139, 212);
+            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(195, 23);
+            label2.TabIndex = 10;
+            label2.Text = "Command Open More";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 96);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(456, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new System.Drawing.Point(30, 79);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(408, 110);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 14;
+            pictureBox1.TabStop = false;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(480, 320);
-            this.ControlBox = false;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form2";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
-            this.TopMost = true;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
-            this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            ClientSize = new System.Drawing.Size(480, 320);
+            ControlBox = false;
+            Controls.Add(pictureBox1);
+            Controls.Add(label1);
+            Controls.Add(label2);
+            DoubleBuffered = true;
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Form2";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Form2";
+            TopMost = true;
+            FormClosing += Form2_FormClosing;
+            Load += Form2_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
