@@ -171,7 +171,7 @@ namespace WindowsFormsApp1
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://win-compe.top");
+            Process.Start("cmd.exe","/c \"start https://win-compe.top\"");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

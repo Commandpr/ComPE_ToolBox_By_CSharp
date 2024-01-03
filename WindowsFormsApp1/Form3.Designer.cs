@@ -29,143 +29,145 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListBox();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            label1 = new System.Windows.Forms.Label();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            label17 = new System.Windows.Forms.Label();
+            linkLabel1 = new System.Windows.Forms.LinkLabel();
+            label2 = new System.Windows.Forms.Label();
+            listView1 = new System.Windows.Forms.ListBox();
+            linkLabel2 = new System.Windows.Forms.LinkLabel();
+            linkLabel3 = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("幼圆", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(18, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 56);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "关于";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            label1.Location = new System.Drawing.Point(2, 19);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(141, 64);
+            label1.TabIndex = 0;
+            label1.Text = "关于";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(162, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(242, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new System.Drawing.Point(144, 12);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(282, 88);
+            pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label17.Location = new System.Drawing.Point(55, 404);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(299, 12);
-            this.label17.TabIndex = 7;
-            this.label17.Text = "Copyright © 2023 ComPE-纯净且简洁的Windows PE系统";
+            label17.AutoSize = true;
+            label17.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            label17.Location = new System.Drawing.Point(47, 423);
+            label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label17.Name = "label17";
+            label17.Size = new System.Drawing.Size(330, 17);
+            label17.TabIndex = 7;
+            label17.Text = "Copyright © 2023 ComPE-纯净且简洁的Windows PE系统";
             // 
             // linkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.linkLabel1.Location = new System.Drawing.Point(179, 382);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(53, 12);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "官方网站";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            linkLabel1.AutoSize = true;
+            linkLabel1.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            linkLabel1.LinkColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            linkLabel1.Location = new System.Drawing.Point(185, 402);
+            linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new System.Drawing.Size(56, 17);
+            linkLabel1.TabIndex = 8;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "官方网站";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(107, 101);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 23);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Command Open More";
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            label2.Location = new System.Drawing.Point(110, 103);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(195, 23);
+            label2.TabIndex = 9;
+            label2.Text = "Command Open More";
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.listView1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.listView1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.listView1.FormattingEnabled = true;
-            this.listView1.HorizontalScrollbar = true;
-            this.listView1.ItemHeight = 14;
-            this.listView1.Location = new System.Drawing.Point(12, 134);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(400, 242);
-            this.listView1.TabIndex = 10;
+            listView1.BackColor = System.Drawing.Color.White;
+            listView1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            listView1.ForeColor = System.Drawing.Color.Black;
+            listView1.FormattingEnabled = true;
+            listView1.HorizontalScrollbar = true;
+            listView1.ItemHeight = 14;
+            listView1.Location = new System.Drawing.Point(11, 129);
+            listView1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            listView1.Name = "listView1";
+            listView1.Size = new System.Drawing.Size(415, 270);
+            listView1.TabIndex = 10;
             // 
             // linkLabel2
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.linkLabel2.Location = new System.Drawing.Point(109, 382);
-            this.linkLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(65, 12);
-            this.linkLabel2.TabIndex = 12;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "命令提示符";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            linkLabel2.AutoSize = true;
+            linkLabel2.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            linkLabel2.LinkColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            linkLabel2.Location = new System.Drawing.Point(103, 402);
+            linkLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new System.Drawing.Size(68, 17);
+            linkLabel2.TabIndex = 12;
+            linkLabel2.TabStop = true;
+            linkLabel2.Text = "命令提示符";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // linkLabel3
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.linkLabel3.Location = new System.Drawing.Point(238, 382);
-            this.linkLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(65, 12);
-            this.linkLabel3.TabIndex = 13;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "任务管理器";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            linkLabel3.AutoSize = true;
+            linkLabel3.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            linkLabel3.LinkColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            linkLabel3.Location = new System.Drawing.Point(254, 402);
+            linkLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            linkLabel3.Name = "linkLabel3";
+            linkLabel3.Size = new System.Drawing.Size(68, 17);
+            linkLabel3.TabIndex = 13;
+            linkLabel3.TabStop = true;
+            linkLabel3.Text = "任务管理器";
+            linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(424, 425);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form3";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "关于ComPE";
-            this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.Color.White;
+            ClientSize = new System.Drawing.Size(437, 451);
+            Controls.Add(linkLabel3);
+            Controls.Add(linkLabel2);
+            Controls.Add(listView1);
+            Controls.Add(label2);
+            Controls.Add(linkLabel1);
+            Controls.Add(label17);
+            Controls.Add(pictureBox1);
+            Controls.Add(label1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Form3";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "关于ComPE";
+            Load += Form3_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
             f.UpdateLabel("初始化窗口...");
             comboBox2.SelectedIndex = 0;
             button2.Enabled = false;
-            pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button2.Location.Y + flowLayoutPanel1.Location.Y);
+            //pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button2.Location.Y + flowLayoutPanel1.Location.Y);
             pictureBox2.Location = new Point(pictureBox2.Location.X, button2.Location.Y + flowLayoutPanel1.Location.Y);
             f.UpdateLabel("获取磁盘列表...");
             textBox1.Text = Environment.CurrentDirectory;
@@ -678,7 +678,7 @@ namespace WindowsFormsApp1
                 //pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button3.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = true;
                 button2.Enabled = true;
-                button3.Enabled = false;;
+                button3.Enabled = false; ;
                 MoveBlock(button3.Location.Y + flowLayoutPanel1.Location.Y);
             }
         }
@@ -715,7 +715,7 @@ namespace WindowsFormsApp1
         {
 
             toMove();
-            pictureBox3.Top = pictureBox2.Top;
+            //pictureBox3.Top = pictureBox2.Top;
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -723,7 +723,7 @@ namespace WindowsFormsApp1
             timer1.Enabled = false;
             timer2.Enabled = false;
             pictureBox2.Top = ya;
-            pictureBox3.Top = pictureBox2.Top;
+            //pictureBox3.Top = pictureBox2.Top;
         }
 
         private void progressBar1_Click(object sender, EventArgs e)

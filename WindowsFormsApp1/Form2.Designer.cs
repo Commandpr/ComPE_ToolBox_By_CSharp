@@ -39,7 +39,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            label1.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64);
             label1.Location = new System.Drawing.Point(15, 267);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
@@ -62,7 +62,7 @@
             // 
             pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new System.Drawing.Point(30, 79);
-            pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new System.Drawing.Size(408, 110);
             pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -73,15 +73,15 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            ClientSize = new System.Drawing.Size(480, 320);
+            BackColor = System.Drawing.Color.White;
+            ClientSize = new System.Drawing.Size(480, 295);
             ControlBox = false;
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(label2);
             DoubleBuffered = true;
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            Margin = new System.Windows.Forms.Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form2";
