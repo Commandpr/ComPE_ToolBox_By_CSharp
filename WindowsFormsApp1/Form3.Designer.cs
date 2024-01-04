@@ -37,6 +37,7 @@
             listView1 = new System.Windows.Forms.ListBox();
             linkLabel2 = new System.Windows.Forms.LinkLabel();
             linkLabel3 = new System.Windows.Forms.LinkLabel();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -108,10 +109,10 @@
             listView1.FormattingEnabled = true;
             listView1.HorizontalScrollbar = true;
             listView1.ItemHeight = 14;
-            listView1.Location = new System.Drawing.Point(11, 129);
+            listView1.Location = new System.Drawing.Point(11, 185);
             listView1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             listView1.Name = "listView1";
-            listView1.Size = new System.Drawing.Size(415, 270);
+            listView1.Size = new System.Drawing.Size(415, 214);
             listView1.TabIndex = 10;
             // 
             // linkLabel2
@@ -142,12 +143,24 @@
             linkLabel3.Text = "任务管理器";
             linkLabel3.LinkClicked += linkLabel3_LinkClicked;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64);
+            label3.Location = new System.Drawing.Point(-1, 126);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(441, 51);
+            label3.TabIndex = 14;
+            label3.Text = "感谢您使用ComPE！\r\n本程序使用C# .NET编写，允许您将ComPE安装到您的设备中，或者保存ISO文件\r\n以下是您的当前系统相关信息";
+            label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(437, 451);
+            Controls.Add(label3);
             Controls.Add(linkLabel3);
             Controls.Add(linkLabel2);
             Controls.Add(listView1);
@@ -180,5 +193,6 @@
         private System.Windows.Forms.ListBox listView1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.Label label3;
     }
 }
