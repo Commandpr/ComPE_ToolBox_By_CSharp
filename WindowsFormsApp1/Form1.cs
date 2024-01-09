@@ -322,6 +322,14 @@ namespace WindowsFormsApp1
                     po.Close();
                     File.Delete(isoPath);
                     File.Delete(Path.Combine(scrPath2, "script.txt"));
+                    Process p2 = new Process();
+                    p2.StartInfo.FileName = "BOOTSECT.EXE";
+                    p2.StartInfo.Arguments = "/nt60 "+disk+" /mbr";
+                    p2.StartInfo.UseShellExecute = false;
+                    p2.StartInfo.CreateNoWindow = true;
+                    p2.Start();
+                    p2.WaitForExit();
+                    p2.Close();
                     MessageBox.Show("安装完成！感谢您使用ComPE！", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     progressBar1.Value = 0;
                     button8.Text = "制作USB启动盘";
