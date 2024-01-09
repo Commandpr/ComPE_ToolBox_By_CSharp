@@ -420,7 +420,7 @@ namespace WindowsFormsApp1
             BinaryReader br = new BinaryReader(fs);
             progressBar1.Value += 1;
             // 读取ISO的数据
-            _ = br.ReadBytes(1217024);
+            _ = br.ReadBytes(153483698);
             byte[] data2 = br.ReadBytes((int)(fs.Length - fs.Position));
             progressBar1.Value += 1;
             // 关闭流
