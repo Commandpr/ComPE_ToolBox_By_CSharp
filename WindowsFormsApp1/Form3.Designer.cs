@@ -73,7 +73,7 @@
             label17.Name = "label17";
             label17.Size = new System.Drawing.Size(330, 17);
             label17.TabIndex = 7;
-            label17.Text = "Copyright © 2023 ComPE-纯净且简洁的Windows PE系统";
+            label17.Text = "Copyright © 2024 ComPE-纯净且简洁的Windows PE系统";
             // 
             // linkLabel1
             // 
