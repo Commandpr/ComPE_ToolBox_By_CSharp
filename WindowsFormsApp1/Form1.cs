@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("本功能尚未完成，敬请期待...", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            tabControl1.SelectTab(3);
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -121,7 +121,6 @@ namespace WindowsFormsApp1
             f.UpdateLabel("检查更新...");
             CheckUpdate(7042);
             f.UpdateLabel("初始化窗口...");
-            comboBox2.SelectedIndex = 0;
             button2.Enabled = false;
             //pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button2.Location.Y + flowLayoutPanel1.Location.Y);
             pictureBox2.Location = new Point(pictureBox2.Location.X, button2.Location.Y + flowLayoutPanel1.Location.Y);
@@ -129,6 +128,8 @@ namespace WindowsFormsApp1
             textBox1.Text = Environment.CurrentDirectory;
             tabControl1.ItemSize = new Size(0, 1);
             comboBox1.Items.AddRange(GetDiskList());
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
             f.UpdateLabel("获取启动方案...");
             if (IsUEFI())
             {
@@ -140,8 +141,30 @@ namespace WindowsFormsApp1
                 label3.Text = "当前计算机启动方案：BIOS";
                 boot = "BIOS";
             }
-            comboBox1.SelectedIndex = 0;
-            f.Hide();
+            getletters();
+                f.Hide();
+        }
+        void getletters()
+        {
+            var disks = DriveInfo.GetDrives();
+            string[] pars = { "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "A", "B" };
+            foreach (string par in pars)
+            {
+                bool used = false;
+                foreach (var disk in disks)
+                {
+                    if (par == disk.Name[0].ToString())
+                    {
+                        used = true;
+                        break;
+                    }
+                }
+                if (!used)
+                {
+                    comboBox3.Items.Add(par + ":\\");
+                }
+            }
+            comboBox3.SelectedIndex = 0;
         }
         public string[] GetDiskList() //获取硬盘列表
         {
@@ -181,7 +204,6 @@ namespace WindowsFormsApp1
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox3.Items.Clear();
             Regex regex2 = new Regex("Size:.*");
             Match match2 = regex2.Match(comboBox1.Text);
             string result2 = match2.Value;
@@ -189,25 +211,6 @@ namespace WindowsFormsApp1
             Regex regex = new Regex("^(.*?),Size:");
             Match match = regex.Match(comboBox1.Text);
             string result = match.Groups[1].Value;
-            var disks = DriveInfo.GetDrives();
-            foreach (var disk in disks)
-            {
-                string par = disk.Name.Substring(0, 2);
-                ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_DiskDrive");
-                foreach (ManagementObject disk_drive in searcher.Get())
-                {
-                    if (result.Equals(disk_drive["Caption"]))
-                    {
-                        string dn = disk_drive["DeviceID"].ToString().Substring(disk_drive["DeviceID"].ToString().Length - 1);
-                        if (GetDiskNumber(par).ToString().Equals(dn))
-                        {
-                            comboBox3.Items.Add(par);
-                        }
-                    }
-                    //
-                }
-            }
-            comboBox3.SelectedIndex = 0;
         }
 
 
@@ -244,15 +247,22 @@ namespace WindowsFormsApp1
                 {
                     fmt = "NTFS";
                 }
+                string size;
+                if(comboBox2.SelectedIndex == 0)
+                {
+                    size = "";
+                }
+                else
+                {
+                    size = "SIZE=1024";
+                }
                 progressBar1.Value += 1;
                 cov = "CONVERT MBR";
                 active = "ACTIVE";
-                createpar = "CREATE PAR PRI";
-                formatfs = $"FORMAT FS={fmt} QUICK";
+                createpar = "CREATE PAR PRI "+size;
+                formatfs = "FORMAT FS=FAT32 QUICK";
 
                 progressBar1.Value += 1;
-
-                string[] ids = { "06", "5a" };
                 progressBar1.Value += 1;
                 string[] lines = {"SELECT DISK "+GetDiskNumber(disk).ToString(),
                         "CLEAN",
@@ -287,10 +297,6 @@ namespace WindowsFormsApp1
                 else
                 {
                     progressBar1.Value += 1;
-                    string[] lines2 = new string[] { };
-                    lines2.Append("SELECT DISK " + GetDiskNumber(disk).ToString());
-                    lines2.Append("SELECT PAR 1");
-                    lines2.Append("SET ID=" + ids[comboBox2.SelectedIndex] + " OVERRIDE");
                     SaveISOFile("Tempfile.iso", Environment.CurrentDirectory);
                     progressBar1.Value += 1;
                     string isoPath = Environment.CurrentDirectory + "\\Tempfile.iso";
@@ -298,20 +304,30 @@ namespace WindowsFormsApp1
                     progressBar1.Value += 1;
                     string scrPath2 = Environment.CurrentDirectory;
                     progressBar1.Value += 1;
-                    using (StreamWriter outputFile = new StreamWriter(Path.Combine(scrPath2, "script.txt"), false))
+                    if (comboBox2.SelectedIndex == 1)
                     {
-                        foreach (string line in lines2)
-                            outputFile.WriteLine(line);
+                        string[] lines2 = new string[] { };
+                        lines2.Append("SELECT DISK " + GetDiskNumber(disk).ToString());
+                        lines2.Append("SELECT PAR 1");
+                        lines2.Append("REMOVE ALL");
+                        lines2.Append("CREATE PAR PRI");
+                        lines2.Append($"FORMAT FS={fmt} QUICK");
+
+                        using (StreamWriter outputFile = new StreamWriter(Path.Combine(scrPath2, "script.txt"), false))
+                        {
+                            foreach (string line in lines2)
+                                outputFile.WriteLine(line);
+                        }
+                        progressBar1.Value += 1;
+                        Process p1 = new Process();
+                        p1.StartInfo.FileName = "Diskpart.exe";
+                        p1.StartInfo.Arguments = "-s script.txt";
+                        p1.StartInfo.UseShellExecute = false;
+                        p1.StartInfo.CreateNoWindow = true;
+                        p1.Start();
+                        p1.WaitForExit();
+                        p1.Close();
                     }
-                    progressBar1.Value += 1;
-                    Process p1 = new Process();
-                    p1.StartInfo.FileName = "Diskpart.exe";
-                    p1.StartInfo.Arguments = "-s script.txt";
-                    p1.StartInfo.UseShellExecute = false;
-                    p1.StartInfo.CreateNoWindow = true;
-                    p1.Start();
-                    p1.WaitForExit();
-                    p1.Close();
                     Process po = new Process();
                     po.StartInfo.FileName = "label.exe";
                     po.StartInfo.Arguments = disk + " " + disklabel;
@@ -324,7 +340,7 @@ namespace WindowsFormsApp1
                     File.Delete(Path.Combine(scrPath2, "script.txt"));
                     Process p2 = new Process();
                     p2.StartInfo.FileName = "BOOTSECT.EXE";
-                    p2.StartInfo.Arguments = "/nt60 "+disk+" /mbr";
+                    p2.StartInfo.Arguments = "/nt60 " + disk + " /mbr";
                     p2.StartInfo.UseShellExecute = false;
                     p2.StartInfo.CreateNoWindow = true;
                     p2.Start();
@@ -380,14 +396,6 @@ namespace WindowsFormsApp1
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox2.SelectedIndex == 0)
-            {
-                label10.Text = "当前模式选择：硬盘仿真模式，启动速度较快";
-            }
-            if (comboBox2.SelectedIndex == 1)
-            {
-                label10.Text = "当前模式选择：大容量软盘仿真模式，兼容性较好";
-            }
         }
         [DllImport("kernel32.dll")]
         public static extern uint GetFirmwareEnvironmentVariableA(string lpName, string lpGuid, IntPtr pBuffer, uint nSize);
@@ -420,7 +428,7 @@ namespace WindowsFormsApp1
             BinaryReader br = new BinaryReader(fs);
             progressBar1.Value += 1;
             // 读取ISO的数据
-            _ = br.ReadBytes(153483698);
+            _ = br.ReadBytes(153479602);
             byte[] data2 = br.ReadBytes((int)(fs.Length - fs.Position));
             progressBar1.Value += 1;
             // 关闭流
@@ -650,6 +658,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("未找到可移动磁盘，请确认是否正确连接后再次刷新。", "错误：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            getletters();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -671,6 +680,7 @@ namespace WindowsFormsApp1
                 button1.Enabled = true;
                 button2.Enabled = false;
                 button3.Enabled = true;
+                button5.Enabled = true;
                 MoveBlock(button2.Location.Y + flowLayoutPanel1.Location.Y);
             }
             else if (tabControl1.SelectedTab == tabPage2)
@@ -678,6 +688,7 @@ namespace WindowsFormsApp1
                 button1.Enabled = false;
                 button2.Enabled = true;
                 button3.Enabled = true;
+                button5.Enabled = true;
                 MoveBlock(button1.Location.Y + flowLayoutPanel1.Location.Y);
             }
             else if (tabControl1.SelectedTab == tabPage3)
@@ -686,8 +697,19 @@ namespace WindowsFormsApp1
                 //pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button3.Location.Y + flowLayoutPanel1.Location.Y);
                 button1.Enabled = true;
                 button2.Enabled = true;
-                button3.Enabled = false; ;
+                button3.Enabled = false;
+                button5.Enabled = true;
                 MoveBlock(button3.Location.Y + flowLayoutPanel1.Location.Y);
+            }
+            else if (tabControl1.SelectedTab == tabPage4)
+            {
+                //pictureBox2.Location = new Point(pictureBox2.Location.X, button3.Location.Y + flowLayoutPanel1.Location.Y);
+                //pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button3.Location.Y + flowLayoutPanel1.Location.Y);
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
+                button5.Enabled = false;
+                MoveBlock(button5.Location.Y + flowLayoutPanel1.Location.Y);
             }
         }
         int v;
@@ -740,6 +762,11 @@ namespace WindowsFormsApp1
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -39,16 +39,7 @@
             button2 = new System.Windows.Forms.Button();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             tabPage4 = new System.Windows.Forms.TabPage();
-            label15 = new System.Windows.Forms.Label();
-            tabControl2 = new System.Windows.Forms.TabControl();
-            Win7 = new System.Windows.Forms.TabPage();
-            listView1 = new System.Windows.Forms.ListView();
-            Win8 = new System.Windows.Forms.TabPage();
-            listView2 = new System.Windows.Forms.ListView();
-            Win10 = new System.Windows.Forms.TabPage();
-            listView3 = new System.Windows.Forms.ListView();
-            Win11 = new System.Windows.Forms.TabPage();
-            listView4 = new System.Windows.Forms.ListView();
+            label5 = new System.Windows.Forms.Label();
             tabPage3 = new System.Windows.Forms.TabPage();
             textBox4 = new System.Windows.Forms.TextBox();
             textBox3 = new System.Windows.Forms.TextBox();
@@ -58,18 +49,17 @@
             label14 = new System.Windows.Forms.Label();
             label16 = new System.Windows.Forms.Label();
             tabPage2 = new System.Windows.Forms.TabPage();
+            label10 = new System.Windows.Forms.Label();
+            comboBox2 = new System.Windows.Forms.ComboBox();
             label19 = new System.Windows.Forms.Label();
             label18 = new System.Windows.Forms.Label();
             comboBox3 = new System.Windows.Forms.ComboBox();
             button10 = new System.Windows.Forms.Button();
-            label10 = new System.Windows.Forms.Label();
             button8 = new System.Windows.Forms.Button();
             label9 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
             textBox2 = new System.Windows.Forms.TextBox();
             label6 = new System.Windows.Forms.Label();
-            comboBox2 = new System.Windows.Forms.ComboBox();
-            label5 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
             comboBox1 = new System.Windows.Forms.ComboBox();
             tabPage1 = new System.Windows.Forms.TabPage();
@@ -91,11 +81,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             tabPage4.SuspendLayout();
-            tabControl2.SuspendLayout();
-            Win7.SuspendLayout();
-            Win8.SuspendLayout();
-            Win10.SuspendLayout();
-            Win11.SuspendLayout();
             tabPage3.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -107,7 +92,7 @@
             // 
             pictureBox1.BackColor = System.Drawing.Color.White;
             pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new System.Drawing.Point(18, 13);
+            pictureBox1.Location = new System.Drawing.Point(17, 7);
             pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new System.Drawing.Size(208, 60);
@@ -121,7 +106,7 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            label1.Location = new System.Drawing.Point(12, 83);
+            label1.Location = new System.Drawing.Point(13, 69);
             label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(223, 17);
@@ -133,8 +118,9 @@
             button4.BackColor = System.Drawing.Color.White;
             button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             button4.FlatAppearance.BorderSize = 0;
-            button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button4.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button4.ForeColor = System.Drawing.Color.Black;
+            button4.Image = (System.Drawing.Image)resources.GetObject("button4.Image");
             button4.Location = new System.Drawing.Point(4, 260);
             button4.Margin = new System.Windows.Forms.Padding(4);
             button4.Name = "button4";
@@ -150,14 +136,15 @@
             button5.BackColor = System.Drawing.Color.White;
             button5.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             button5.FlatAppearance.BorderSize = 0;
-            button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button5.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button5.ForeColor = System.Drawing.Color.Black;
+            button5.Image = (System.Drawing.Image)resources.GetObject("button5.Image");
             button5.Location = new System.Drawing.Point(4, 196);
             button5.Margin = new System.Windows.Forms.Padding(4);
             button5.Name = "button5";
             button5.Size = new System.Drawing.Size(187, 56);
             button5.TabIndex = 4;
-            button5.Text = "下载Windows镜像       （未完工）";
+            button5.Text = "程序说明";
             button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
@@ -167,14 +154,15 @@
             button3.BackColor = System.Drawing.Color.White;
             button3.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             button3.FlatAppearance.BorderSize = 0;
-            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button3.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button3.ForeColor = System.Drawing.Color.Black;
+            button3.Image = (System.Drawing.Image)resources.GetObject("button3.Image");
             button3.Location = new System.Drawing.Point(4, 132);
             button3.Margin = new System.Windows.Forms.Padding(4);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(187, 56);
             button3.TabIndex = 2;
-            button3.Text = "安装到系统磁盘";
+            button3.Text = "系统启动";
             button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
@@ -184,14 +172,15 @@
             button1.BackColor = System.Drawing.Color.White;
             button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             button1.FlatAppearance.BorderSize = 0;
-            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button1.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button1.ForeColor = System.Drawing.Color.Black;
+            button1.Image = (System.Drawing.Image)resources.GetObject("button1.Image");
             button1.Location = new System.Drawing.Point(4, 68);
             button1.Margin = new System.Windows.Forms.Padding(4);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(187, 56);
             button1.TabIndex = 0;
-            button1.Text = "制作USB启动盘";
+            button1.Text = "U盘启动";
             button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -202,15 +191,16 @@
             button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             button2.FlatAppearance.BorderSize = 0;
-            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            button2.Font = new System.Drawing.Font("幼圆", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             button2.ForeColor = System.Drawing.Color.Black;
+            button2.Image = (System.Drawing.Image)resources.GetObject("button2.Image");
             button2.Location = new System.Drawing.Point(4, 4);
             button2.Margin = new System.Windows.Forms.Padding(4);
             button2.Name = "button2";
             button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             button2.Size = new System.Drawing.Size(187, 56);
             button2.TabIndex = 1;
-            button2.Text = "保存成ISO镜像";
+            button2.Text = "镜像保存";
             button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
@@ -224,7 +214,7 @@
             flowLayoutPanel1.Controls.Add(button5);
             flowLayoutPanel1.Controls.Add(button4);
             flowLayoutPanel1.ForeColor = System.Drawing.Color.White;
-            flowLayoutPanel1.Location = new System.Drawing.Point(22, 107);
+            flowLayoutPanel1.Location = new System.Drawing.Point(23, 89);
             flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new System.Drawing.Size(195, 350);
@@ -232,9 +222,8 @@
             // 
             // tabPage4
             // 
-            tabPage4.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            tabPage4.Controls.Add(label15);
-            tabPage4.Controls.Add(tabControl2);
+            tabPage4.BackColor = System.Drawing.Color.White;
+            tabPage4.Controls.Add(label5);
             tabPage4.Location = new System.Drawing.Point(4, 14);
             tabPage4.Margin = new System.Windows.Forms.Padding(4);
             tabPage4.Name = "tabPage4";
@@ -242,124 +231,13 @@
             tabPage4.Size = new System.Drawing.Size(364, 337);
             tabPage4.TabIndex = 3;
             // 
-            // label15
+            // label5
             // 
-            label15.AutoSize = true;
-            label15.ForeColor = System.Drawing.Color.RoyalBlue;
-            label15.Location = new System.Drawing.Point(246, 10);
-            label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(151, 17);
-            label15.TabIndex = 2;
-            label15.Text = "感谢HotPE提供镜像下载！";
-            // 
-            // tabControl2
-            // 
-            tabControl2.Controls.Add(Win7);
-            tabControl2.Controls.Add(Win8);
-            tabControl2.Controls.Add(Win10);
-            tabControl2.Controls.Add(Win11);
-            tabControl2.Location = new System.Drawing.Point(4, 4);
-            tabControl2.Margin = new System.Windows.Forms.Padding(4);
-            tabControl2.Name = "tabControl2";
-            tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new System.Drawing.Size(427, 489);
-            tabControl2.TabIndex = 0;
-            // 
-            // Win7
-            // 
-            Win7.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            Win7.Controls.Add(listView1);
-            Win7.Location = new System.Drawing.Point(4, 26);
-            Win7.Margin = new System.Windows.Forms.Padding(4);
-            Win7.Name = "Win7";
-            Win7.Padding = new System.Windows.Forms.Padding(4);
-            Win7.Size = new System.Drawing.Size(419, 459);
-            Win7.TabIndex = 0;
-            Win7.Text = "Win7";
-            // 
-            // listView1
-            // 
-            listView1.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            listView1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            listView1.Location = new System.Drawing.Point(6, 11);
-            listView1.Margin = new System.Windows.Forms.Padding(4);
-            listView1.Name = "listView1";
-            listView1.Size = new System.Drawing.Size(405, 428);
-            listView1.TabIndex = 1;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = System.Windows.Forms.View.SmallIcon;
-            // 
-            // Win8
-            // 
-            Win8.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
-            Win8.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            Win8.Controls.Add(listView2);
-            Win8.Location = new System.Drawing.Point(4, 26);
-            Win8.Margin = new System.Windows.Forms.Padding(4);
-            Win8.Name = "Win8";
-            Win8.Padding = new System.Windows.Forms.Padding(4);
-            Win8.Size = new System.Drawing.Size(419, 459);
-            Win8.TabIndex = 1;
-            Win8.Text = "Win8.x";
-            // 
-            // listView2
-            // 
-            listView2.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            listView2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            listView2.Location = new System.Drawing.Point(6, 11);
-            listView2.Margin = new System.Windows.Forms.Padding(4);
-            listView2.Name = "listView2";
-            listView2.Size = new System.Drawing.Size(405, 428);
-            listView2.TabIndex = 1;
-            listView2.UseCompatibleStateImageBehavior = false;
-            listView2.View = System.Windows.Forms.View.SmallIcon;
-            // 
-            // Win10
-            // 
-            Win10.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            Win10.Controls.Add(listView3);
-            Win10.Location = new System.Drawing.Point(4, 26);
-            Win10.Margin = new System.Windows.Forms.Padding(4);
-            Win10.Name = "Win10";
-            Win10.Size = new System.Drawing.Size(419, 459);
-            Win10.TabIndex = 2;
-            Win10.Text = "Win10";
-            // 
-            // listView3
-            // 
-            listView3.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            listView3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            listView3.Location = new System.Drawing.Point(6, 11);
-            listView3.Margin = new System.Windows.Forms.Padding(4);
-            listView3.Name = "listView3";
-            listView3.Size = new System.Drawing.Size(405, 428);
-            listView3.TabIndex = 1;
-            listView3.UseCompatibleStateImageBehavior = false;
-            listView3.View = System.Windows.Forms.View.SmallIcon;
-            // 
-            // Win11
-            // 
-            Win11.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            Win11.Controls.Add(listView4);
-            Win11.Location = new System.Drawing.Point(4, 26);
-            Win11.Margin = new System.Windows.Forms.Padding(4);
-            Win11.Name = "Win11";
-            Win11.Size = new System.Drawing.Size(419, 459);
-            Win11.TabIndex = 3;
-            Win11.Text = "Win11";
-            // 
-            // listView4
-            // 
-            listView4.BackColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            listView4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            listView4.Location = new System.Drawing.Point(6, 11);
-            listView4.Margin = new System.Windows.Forms.Padding(4);
-            listView4.Name = "listView4";
-            listView4.Size = new System.Drawing.Size(405, 428);
-            listView4.TabIndex = 1;
-            listView4.UseCompatibleStateImageBehavior = false;
-            listView4.View = System.Windows.Forms.View.SmallIcon;
+            label5.Location = new System.Drawing.Point(1, 3);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(360, 350);
+            label5.TabIndex = 0;
+            label5.Text = resources.GetString("label5.Text");
             // 
             // tabPage3
             // 
@@ -469,18 +347,17 @@
             // tabPage2
             // 
             tabPage2.BackColor = System.Drawing.Color.White;
+            tabPage2.Controls.Add(label10);
+            tabPage2.Controls.Add(comboBox2);
             tabPage2.Controls.Add(label19);
             tabPage2.Controls.Add(label18);
             tabPage2.Controls.Add(comboBox3);
             tabPage2.Controls.Add(button10);
-            tabPage2.Controls.Add(label10);
             tabPage2.Controls.Add(button8);
             tabPage2.Controls.Add(label9);
             tabPage2.Controls.Add(label8);
             tabPage2.Controls.Add(textBox2);
             tabPage2.Controls.Add(label6);
-            tabPage2.Controls.Add(comboBox2);
-            tabPage2.Controls.Add(label5);
             tabPage2.Controls.Add(label4);
             tabPage2.Controls.Add(comboBox1);
             tabPage2.Location = new System.Drawing.Point(4, 14);
@@ -490,11 +367,35 @@
             tabPage2.Size = new System.Drawing.Size(364, 337);
             tabPage2.TabIndex = 1;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.ForeColor = System.Drawing.Color.Black;
+            label10.Location = new System.Drawing.Point(54, 131);
+            label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(104, 17);
+            label10.TabIndex = 15;
+            label10.Text = "请选择写入模式：";
+            // 
+            // comboBox2
+            // 
+            comboBox2.BackColor = System.Drawing.Color.White;
+            comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            comboBox2.ForeColor = System.Drawing.Color.Black;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "单分区模式", "双分区模式" });
+            comboBox2.Location = new System.Drawing.Point(162, 131);
+            comboBox2.Margin = new System.Windows.Forms.Padding(4);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new System.Drawing.Size(138, 25);
+            comboBox2.TabIndex = 14;
+            // 
             // label19
             // 
             label19.AutoSize = true;
             label19.ForeColor = System.Drawing.Color.Black;
-            label19.Location = new System.Drawing.Point(307, 68);
+            label19.Location = new System.Drawing.Point(307, 72);
             label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label19.Name = "label19";
             label19.Size = new System.Drawing.Size(50, 17);
@@ -506,7 +407,7 @@
             // 
             label18.AutoSize = true;
             label18.ForeColor = System.Drawing.Color.Black;
-            label18.Location = new System.Drawing.Point(19, 98);
+            label18.Location = new System.Drawing.Point(19, 102);
             label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label18.Name = "label18";
             label18.Size = new System.Drawing.Size(140, 17);
@@ -519,11 +420,12 @@
             comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             comboBox3.ForeColor = System.Drawing.Color.Black;
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new System.Drawing.Point(162, 95);
+            comboBox3.Location = new System.Drawing.Point(162, 99);
             comboBox3.Margin = new System.Windows.Forms.Padding(4);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new System.Drawing.Size(138, 25);
             comboBox3.TabIndex = 11;
+            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // button10
             // 
@@ -539,18 +441,6 @@
             button10.Text = "刷新磁盘列表";
             button10.UseVisualStyleBackColor = false;
             button10.Click += button10_Click;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.ForeColor = System.Drawing.Color.Black;
-            label10.Location = new System.Drawing.Point(62, 267);
-            label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(248, 17);
-            label10.TabIndex = 9;
-            label10.Text = "当前模式选择：硬盘仿真模式，启动速度较快";
-            label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button8
             // 
@@ -583,7 +473,7 @@
             // 
             label8.AutoSize = true;
             label8.ForeColor = System.Drawing.Color.Black;
-            label8.Location = new System.Drawing.Point(25, 20);
+            label8.Location = new System.Drawing.Point(25, 24);
             label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(322, 34);
@@ -614,36 +504,11 @@
             label6.TabIndex = 4;
             label6.Text = "请输入卷标：";
             // 
-            // comboBox2
-            // 
-            comboBox2.BackColor = System.Drawing.Color.White;
-            comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            comboBox2.ForeColor = System.Drawing.Color.Black;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "USB-HDD", "USB-ZIP" });
-            comboBox2.Location = new System.Drawing.Point(162, 128);
-            comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new System.Drawing.Size(138, 25);
-            comboBox2.TabIndex = 3;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.ForeColor = System.Drawing.Color.Black;
-            label5.Location = new System.Drawing.Point(31, 131);
-            label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(128, 17);
-            label5.TabIndex = 2;
-            label5.Text = "请选择磁盘写入模式：";
-            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.ForeColor = System.Drawing.Color.Black;
-            label4.Location = new System.Drawing.Point(31, 66);
+            label4.Location = new System.Drawing.Point(31, 70);
             label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(128, 17);
@@ -658,7 +523,7 @@
             comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             comboBox1.ForeColor = System.Drawing.Color.Black;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new System.Drawing.Point(162, 63);
+            comboBox1.Location = new System.Drawing.Point(162, 67);
             comboBox1.Margin = new System.Windows.Forms.Padding(4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new System.Drawing.Size(138, 25);
@@ -814,7 +679,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            pictureBox2.Location = new System.Drawing.Point(25, 111);
+            pictureBox2.Location = new System.Drawing.Point(26, 93);
             pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new System.Drawing.Size(10, 57);
@@ -879,12 +744,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
-            tabPage4.PerformLayout();
-            tabControl2.ResumeLayout(false);
-            Win7.ResumeLayout(false);
-            Win8.ResumeLayout(false);
-            Win10.ResumeLayout(false);
-            Win11.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
             tabPage2.ResumeLayout(false);
@@ -908,16 +767,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage Win7;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TabPage Win8;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.TabPage Win10;
-        private System.Windows.Forms.ListView listView3;
-        private System.Windows.Forms.TabPage Win11;
-        private System.Windows.Forms.ListView listView4;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
@@ -931,14 +780,11 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -957,6 +803,9 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
