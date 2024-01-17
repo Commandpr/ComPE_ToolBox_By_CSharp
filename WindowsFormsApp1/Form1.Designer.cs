@@ -461,12 +461,12 @@
             // 
             label9.AutoSize = true;
             label9.ForeColor = System.Drawing.Color.Black;
-            label9.Location = new System.Drawing.Point(27, 217);
+            label9.Location = new System.Drawing.Point(54, 226);
             label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(320, 51);
+            label9.Size = new System.Drawing.Size(272, 34);
             label9.TabIndex = 7;
-            label9.Text = "注意：安装到的磁盘会清除对应磁盘的所有分区，\r\n故请注意安装前备份好磁盘内所有的数据\r\n刷新磁盘列表的时候可能会有短暂未响应状态，属正常现象";
+            label9.Text = "注意：安装到的磁盘会清除对应磁盘的所有分区，\r\n故请注意安装前备份好磁盘内所有的数据";
             label9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label8
@@ -553,12 +553,12 @@
             // 
             label20.AutoSize = true;
             label20.ForeColor = System.Drawing.Color.Black;
-            label20.Location = new System.Drawing.Point(46, 205);
+            label20.Location = new System.Drawing.Point(38, 196);
             label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label20.Name = "label20";
-            label20.Size = new System.Drawing.Size(293, 34);
+            label20.Size = new System.Drawing.Size(293, 51);
             label20.TabIndex = 18;
-            label20.Text = "注意：默认情况下，将ISO保存到程序运行同级目录下\r\n建议您将ISO保存到自己方便寻找的文件夹下";
+            label20.Text = "注意：默认情况下，将ISO保存到程序运行同级目录下\r\n建议您将ISO保存到自己方便寻找的文件夹下\r\n仅该功能会短暂无响应，属正常现象";
             label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // textBox5

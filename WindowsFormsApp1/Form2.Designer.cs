@@ -32,6 +32,7 @@
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -69,6 +70,16 @@
             pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(139, 235);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(188, 34);
+            label3.TabIndex = 15;
+            label3.Text = "程序依赖WMI服务获取相关信息\r\n若无法启动请检查服务是否已开启";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -76,6 +87,7 @@
             BackColor = System.Drawing.Color.White;
             ClientSize = new System.Drawing.Size(480, 295);
             ControlBox = false;
+            Controls.Add(label3);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(label2);
@@ -101,5 +113,6 @@
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
