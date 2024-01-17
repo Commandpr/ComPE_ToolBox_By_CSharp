@@ -299,12 +299,12 @@
             label12.AutoSize = true;
             label12.BackColor = System.Drawing.Color.White;
             label12.ForeColor = System.Drawing.Color.Black;
-            label12.Location = new System.Drawing.Point(23, 198);
+            label12.Location = new System.Drawing.Point(55, 203);
             label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(308, 34);
+            label12.Size = new System.Drawing.Size(260, 34);
             label12.TabIndex = 17;
-            label12.Text = "注意：本操作设计引导修改，\r\n建议关闭反病毒软件后继续操作，否则可能导致写入失败";
+            label12.Text = "注意：本操作设计引导修改，\r\n可能会被安全软件识别为危险操作，请注意辨别";
             label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label13
@@ -461,7 +461,7 @@
             // 
             label9.AutoSize = true;
             label9.ForeColor = System.Drawing.Color.Black;
-            label9.Location = new System.Drawing.Point(31, 215);
+            label9.Location = new System.Drawing.Point(27, 217);
             label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(320, 51);

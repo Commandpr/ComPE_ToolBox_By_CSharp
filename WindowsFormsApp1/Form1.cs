@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
         {
             if (boot == "UEFI")
             {
-                if (MessageBox.Show("请确认重启前已保存所有的项目以免数据丢失\n重启后将进入UEFI固件管理界面，请确认完毕后选择“确认”，否则请选择“取消”", "警告：", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                if (MessageBox.Show("请确认重启前已保存所有的项目以免数据丢失\n重启后将进入固件管理界面，请确认完毕后选择“确认”，否则请选择“取消”", "警告：", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
                     Process.Start("shutdown.exe", "/r /fw /t 00");
                 }
@@ -351,7 +351,7 @@ namespace WindowsFormsApp1
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("再次警告！写入前请保存好您的U盘或可移动磁盘里的所有内容，以免数据丢失！\n程序运行图中可能出现未响应状态，属于正常现象\n继续请选择“是”，否则请选择“否”", "警告：", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if (MessageBox.Show("警告！写入前请保存好您的U盘或可移动磁盘里的所有内容，以免数据丢失！\n继续请选择“是”，否则请选择“否”", "警告：", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
             {
                 Thread t = new Thread(makedisk);
                 t.Start();
@@ -653,7 +653,7 @@ namespace WindowsFormsApp1
         private void button9_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("警告！如果未关闭反病毒软件，程序可能执行失败，建议关闭反病毒软件。\n程序可能无响应，是正常现象，不要强制退出。\n继续请选择“确定”，否则请选择“取消”", "提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("警告！程序运行期间可能会被安全软件识别为高危操作，请注意辨别！。\n继续请选择“确定”，否则请选择“取消”", "提示：", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 Thread t = new Thread(makesys);
                 t.Start();
