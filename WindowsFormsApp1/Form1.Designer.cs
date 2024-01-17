@@ -708,7 +708,7 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64);
-            label3.Location = new System.Drawing.Point(458, 412);
+            label3.Location = new System.Drawing.Point(456, 412);
             label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.RightToLeft = System.Windows.Forms.RightToLeft.No;

@@ -137,7 +137,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                label3.Text = "当前计算机启动方案：BIOS";
+                label3.Text = "当前计算机启动方案：Legacy";
                 boot = "BIOS";
             }
             getletters();
