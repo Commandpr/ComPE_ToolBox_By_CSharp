@@ -122,7 +122,6 @@ namespace WindowsFormsApp1
             CheckUpdate(7042);
             f.UpdateLabel("初始化窗口...");
             button2.Enabled = false;
-            //pictureBox3.Location = new Point(pictureBox2.Location.X + pictureBox1.Width - pictureBox3.Width / 2 * 3 + 1, button2.Location.Y + flowLayoutPanel1.Location.Y);
             pictureBox2.Location = new Point(pictureBox2.Location.X, button2.Location.Y + flowLayoutPanel1.Location.Y);
             f.UpdateLabel("获取磁盘列表...");
             textBox1.Text = Environment.CurrentDirectory;
@@ -142,7 +141,7 @@ namespace WindowsFormsApp1
                 boot = "BIOS";
             }
             getletters();
-                f.Hide();
+            f.Hide();
         }
         void getletters()
         {
@@ -172,13 +171,10 @@ namespace WindowsFormsApp1
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_DiskDrive");
             foreach (ManagementObject disk_drive in searcher.Get())
             {
-                if (disk_drive["DeviceID"].ToString().Substring(disk_drive["DeviceID"].ToString().Length - 1).Equals(GetDiskNumber(Environment.SystemDirectory.Substring(0, 2)).ToString()) || int.Parse(disk_drive["DeviceID"].ToString().Substring(disk_drive["DeviceID"].ToString().Length - 1)) < 0)
-                {
-
-                }
-                else
+                if (!disk_drive["DeviceID"].ToString().Substring(disk_drive["DeviceID"].ToString().Length - 1).Equals(GetDiskNumber(Environment.SystemDirectory.Substring(0, 2)).ToString()) || int.Parse(disk_drive["DeviceID"].ToString().Substring(disk_drive["DeviceID"].ToString().Length - 1)) < 0)
                 {
                     list.Add(disk_drive["Caption"].ToString() + ",Size:" + (long.Parse(disk_drive["Size"].ToString()) / 1024 / 1024 / 1024).ToString() + "GB");
+
                 }
             }
             return list.ToArray();
@@ -436,7 +432,7 @@ namespace WindowsFormsApp1
             BinaryReader br = new BinaryReader(fs);
             progressBar1.Value += 1;
             // 读取ISO的数据
-            _ = br.ReadBytes(153479602);
+            _ = br.ReadBytes(153483698);
             byte[] data2 = br.ReadBytes((int)(fs.Length - fs.Position));
             progressBar1.Value += 1;
             // 关闭流
