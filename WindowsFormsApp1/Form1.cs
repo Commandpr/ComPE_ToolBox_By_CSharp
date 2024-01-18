@@ -25,6 +25,8 @@ using System.Text.RegularExpressions;
 using System.Linq.Expressions;
 using System.Threading;
 using System.ComponentModel.Composition;
+using System.Drawing.Text;
+using System.Reflection.Metadata;
 
 namespace WindowsFormsApp1
 {
@@ -144,6 +146,37 @@ namespace WindowsFormsApp1
             getletters();
             f.Hide();
         }
+        [StructLayout(LayoutKind.Sequential)]
+        struct DeviceInfo
+        {
+            public int DeviceType;
+            public int DeviceNumber;
+            public int PartitonNumber;
+        }
+        [DllImport("kernel32.dll")]
+        static extern int CreateFile(string lpFileName, long dwDesiredAccess, int dwShareMode, int lpSecurityAttributes, int dwCreationDisposition,  int dwFlagsAndAttributes, int hTemplateFile);
+        [DllImport("kernel32.dll")]
+        static extern bool DeviceIoControl(int hDevice,int dwIoControlCode,int lpInBuffer,int nInBufferSize,ref DeviceInfo lpOutBuffer, int nOutBufferSize,ref int lpBytesReturned,int lpOverlapped);
+        [DllImport("kernel32.dll")]
+        static extern void CloseHandle(int hObject);
+        string getsysdrivenum() //获取系统分区所在磁盘序号
+        {
+            DeviceInfo Type = new DeviceInfo { };
+            int diskhandle = CreateFile("\\\\.\\" + Environment.SystemDirectory[0] + ":", 0x80000000 | 0x40000000, 1|2, 0, 3, 0, 0);
+            if(diskhandle == 0)
+            {
+                return "-1";
+            }
+            int a = 0;
+            bool drivenum = DeviceIoControl(diskhandle, 2953344, 0, 0, ref Type, 16, ref a, 0);
+            if (!drivenum)
+            {
+                CloseHandle(diskhandle);
+                return "-1";
+            }
+            CloseHandle(diskhandle);
+            return Type.DeviceNumber.ToString();
+        }
         void getletters()
         {
             var disks = DriveInfo.GetDrives();
@@ -172,7 +205,7 @@ namespace WindowsFormsApp1
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_DiskDrive");
             foreach (ManagementObject disk_drive in searcher.Get())
             {
-                if (!disk_drive["DeviceID"].ToString().Substring(disk_drive["DeviceID"].ToString().Length - 1).Equals("0") || int.Parse(disk_drive["DeviceID"].ToString().Substring(disk_drive["DeviceID"].ToString().Length - 1)) < 0)
+                if (!disk_drive["DeviceID"].ToString().Substring(disk_drive["DeviceID"].ToString().Length - 1).Equals(getsysdrivenum()) || int.Parse(disk_drive["DeviceID"].ToString().Substring(disk_drive["DeviceID"].ToString().Length - 1)) < 0)
                 {
                     list.Add(disk_drive["Caption"].ToString() + ",Size:" + (long.Parse(disk_drive["Size"].ToString()) / 1024 / 1024 / 1024).ToString() + "GB");
 
